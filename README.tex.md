@@ -63,11 +63,14 @@ En primer lugar, se hará la suposición de que el peso $w$ tiene integral finit
 \end{equation}
 
 Aplicando el operador $D$, cuya condición de simetría con respecto al peso se mostró en la ecuación \ref{Simetria_D}, a la función constante $u_0(x)=1$ obtenemos $Du_0 = r$, así que $r$ debe ser una constante y podemos considerar que $r = 0$. De esta forma, aplicando $D$ a $u_1(x) = x$ obtenemos:
+
 \begin{equation}
 Du_1 = \frac{(pw)'}{w} = p' + p \frac{w'}{w}, \nonumber
 \label{eq_Du1}
 \end{equation}
+
 esta expresión debe ser un polinomio de grado máximo 1. Ahora, si se considera $u_2(x) = \frac{1}{2}x^2$:
+
 \begin{equation}
 Du_2 = p + x \left( p' + p \frac{w'}{w} \right),  \nonumber
 \end{equation}
