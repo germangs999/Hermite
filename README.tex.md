@@ -48,9 +48,11 @@ Du + \lambda u = 0. \nonumber
 \end{equation}
 
 Si $u_1$ y $u_2$ son funciones generadoras con diferentes valores generadores $-\lambda_1$ y $-\lambda_2$ entonces:
+
 \begin{equation}
 -\lambda_1(u_1, u_2) = (Du_1, u_2) = (u_1, Du_2) = -\lambda_2(u_1, u_2), \nonumber
 \end{equation}
+
 además, $u_1$ y $u_2$ son ortogonales si $(u_1, u_2)  = 0$. %Ahora, se deben plantear las condiciones para el caso en el que el conjunto de valores generadores del operador $D$ incluya a los polinomios de cualquier grado, o por lo menos los grados 0,1 y 2. 
 
 %La condición de simetría con respecto al peso del operador $D$ se mostró en la ecuación \ref{Simetria_D}. 
