@@ -55,8 +55,6 @@ Si $u_1$ y $u_2$ son funciones generadoras con diferentes valores generadores $-
 
 además, $u_1$ y $u_2$ son ortogonales si $(u_1, u_2)  = 0$. %Ahora, se deben plantear las condiciones para el caso en el que el conjunto de valores generadores del operador $D$ incluya a los polinomios de cualquier grado, o por lo menos los grados 0,1 y 2. 
 
-%La condición de simetría con respecto al peso del operador $D$ se mostró en la ecuación \ref{Simetria_D}. 
-
 Ahora, se supondrá la existencia de polinomios de grados 0, 1 y 2 que son funciones generadoras de $D$, es decir, se asume que el espacio de los polinomios de grado $\leq$ $k$, $k \in \left\lbrace 0,1,2\right\rbrace $, está en el dominio de $D$. 
 
 En primer lugar, se hará la suposición de que el peso $w$ tiene integral finita:
