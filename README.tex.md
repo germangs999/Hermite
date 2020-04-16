@@ -29,4 +29,4 @@ D = p\frac{d^2}{dx^2} + \frac{(pw)'}{w}\frac{d}{dx} + r.
 \label{Simetria_D}
 \end{equation}
 
-A partir de estas definiciones y condiciones se precisa la extensión de la condición de simetría a una clase más larga de funciones y para lograrlo es necesario aplicar condiciones de frontera.
+A partir de estas definiciones y condiciones se precisa la extensión de la condición de simetría a una clase más larga de funciones y para lograrlo es necesario aplicar condiciones de frontera.b
