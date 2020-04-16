@@ -3,7 +3,7 @@ La transformada Hermite como herramienta para el procesamiento digital de señal
 ## Polinomios de Hermite
 La ecuación diferencial general lineal de segundo orden en el intervalo definido entre $-\infty$ a $\infty$, $Int = (-\infty, \infty)$, es:
 \begin{equation}
-p(x)u''(x) + q(x)u'(x)+r(x)u(x) = f(x), qquad qquad (1) \nonumber
+p(x)u''(x) + q(x)u'(x)+r(x)u(x) = f(x), \qquad \qquad (1) \nonumber
 \end{equation}
 con su correspondiente ecuación homogénea:
 \begin{equation}
