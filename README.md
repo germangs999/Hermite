@@ -46,13 +46,18 @@ Aplicando el operador <img src="/tex/78ec2b7008296ce0561cf83393cb746d.svg?invert
 esta expresión debe ser un polinomio de grado máximo 1. Ahora, si se considera <img src="/tex/6c460dbcfb16a30cbdbf3e5449c3dd6a.svg?invert_in_darkmode&sanitize=true" align=middle width=87.32805674999999pt height=27.77565449999998pt/>:
 
 <p align="center"><img src="/tex/fad883e9cc02a0948804b34499d1a9bd.svg?invert_in_darkmode&sanitize=true" align=middle width=186.78395999999998pt height=39.452455349999994pt/></p>
+
 por lo que <img src="/tex/e752a14b23931dbf7b12fbf24007e5a5.svg?invert_in_darkmode&sanitize=true" align=middle width=30.029051249999988pt height=22.465723500000017pt/> debe ser un polinomio de grado máximo 2, entonces, el polinomio <img src="/tex/2ec6e630f199f589a2402fdf3e0289d5.svg?invert_in_darkmode&sanitize=true" align=middle width=8.270567249999992pt height=14.15524440000002pt/> es de grado máximo 2.
 
 La condición de simetría requiere que:
 <p align="center"><img src="/tex/6620b488d1bf4c71b5d2a6dd5bf474ab.svg?invert_in_darkmode&sanitize=true" align=middle width=316.26666389999997pt height=41.27894265pt/></p>
+
 para toda <img src="/tex/cfecde842a36413fb233cf4913fbcb8f.svg?invert_in_darkmode&sanitize=true" align=middle width=25.27401689999999pt height=14.15524440000002pt/> definida en el intervalo. Como se ha mencionado anteriormente, una condición necesaria para la simetría es que <img src="/tex/8a29053cc48959ad13c6a66210f1cd65.svg?invert_in_darkmode&sanitize=true" align=middle width=54.271222499999986pt height=21.18721440000001pt/> en cada punto final del intervalo. Resumiendo, se buscan soluciones polinomiales <img src="/tex/59943bee64f9108d93bee6741052286b.svg?invert_in_darkmode&sanitize=true" align=middle width=39.39892604999999pt height=24.65753399999998pt/> que sean funciones generadoras de un operador diferencial de la forma:
+
 <p align="center"><img src="/tex/23ea1583c8338b08e7af62349a1804ab.svg?invert_in_darkmode&sanitize=true" align=middle width=242.749947pt height=41.7812637pt/></p>  
+
 donde <img src="/tex/a7024fd20adb1541682356994daf0449.svg?invert_in_darkmode&sanitize=true" align=middle width=93.11082329999998pt height=24.65753399999998pt/>, <img src="/tex/049663a27d86f8494043445f01ea1482.svg?invert_in_darkmode&sanitize=true" align=middle width=92.76834434999998pt height=24.65753399999998pt/>, <img src="/tex/c5650e22f5731eb6c3886cb2096d1864.svg?invert_in_darkmode&sanitize=true" align=middle width=88.13597759999999pt height=22.831056599999986pt/> y 
+
 <p align="center"><img src="/tex/24850ada782e9a5e3485815d284941c2.svg?invert_in_darkmode&sanitize=true" align=middle width=84.5015094pt height=17.2895712pt/></p> 
 
 A este tipo de operadores diferenciales se les denomina de tipo hipergeométrico o de tipo Sturm-Liouville. A la ecuación \ref{eq_pearson} se le denomina como la ecuación de Pearson.
