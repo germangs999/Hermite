@@ -98,4 +98,47 @@ donde $orden(p) \leq 2$, $orden(q) \leq 1$, $Dp_n = \lambda_n p_n$ y
 
 A este tipo de operadores diferenciales se les denomina de tipo hipergeométrico o de tipo Sturm-Liouville. A la ecuación \ref{eq_pearson} se le denomina como la ecuación de Pearson.
 
+Dado que $p$ es un polinomio de grado máximo 2, después de normalizaciones (mapeos afines de la recta, multiplicación del peso, el operador y los polinomios por constantes) se obtiene que existen 5 tipos de familias de polinomios ortogonales que son funciones generadoras del operador diferencial hipergeométrico $D$ (ecuación \ref{SL_eq}) dependiendo del grado y las raíces de $p$:
 
+\begin{enumerate}
+
+\item{$p$ constante:} El polinomio $w' / w$ debe ser de grado máximo 1. Resolviendo la ecuación diferencial, se tiene que $w(x) = e^h$, donde $h$ es un polinomio de grado máximo 2. Las condiciones de frontera sólo se cumplen para $w(x) = e^{-x^2}$, cuyo intervalo abierto es $Int = (-\infty, \infty)$. Entonces, el polinomio $q = w'/w = -2x$ es un polinomio de grado 1, por lo tanto, el operador $D$ en este caso es:
+
+\begin{equation}
+D = \frac{d^2}{dx^2} - 2x \frac{d}{dx}. \nonumber
+\end{equation}
+
+Por cada polinomio de grado $n$, el operador $D$ lo lleva a otro polinomio del mismo grado. El valor generador para este caso es $\lambda_n = -2n$. Los polinomios ortogonales con respecto al peso $e^{-x^2}$ son los polinomios de Hermite $H_n(x)$ y cumplen con $DH_n = -2nH_n$. Una vez que el peso $w(x)$ es normalizado, éste corresponde a la distribución normal o Gaussiana.
+
+\item{$p$ lineal:} Si se normaliza a $p(x) = x$ y se tiene que $w'/w = b+\alpha/x$. Al resolver se tiene que, salvo constantes, $w(x) = x^\alpha e^{bx}$. Las condiciones de frontera para $pw = xw = x^{\alpha+1} e^{bx}$ con el intervalo no acotado $Int = [0, \infty)$ con $b<0$ y $\alpha > -1$. Con lo cual, tras normalizar, $w(x) = x^{\alpha} e^{-x}$, $\alpha >-1$. El polinomio $q = (xw)'/w = \alpha + 1 - x$ es un polinomio de grado 1. Por lo tanto, el operador $D$ es:
+
+\begin{equation}
+D = x\frac{d^2}{dx^2} + (\alpha + 1 - x)\frac{d}{dx}. \nonumber
+\end{equation}
+
+Por cada polinomio de grado $n$, el operador $D$ lo lleva a otro polinomio del mismo grado. El valor generador para este caso, igualando coeficientes, es $\lambda_n = -n$. Los polinomios ortogonales con respecto al peso $x^{\alpha} e^{-x}$ son los polinomios de Laguerre $L^{\alpha}_n(x)$ y cumplen con $DL^{\alpha}_n = -n L^{\alpha}_n$. Una vez que el peso $w(x)$ es normalizado, éste corresponde a la distribución Gamma y como caso particular, para $\alpha = 0$, corresponde a la distribución exponencial.
+
+\item{$p$ cuadrático con raíces reales distintas:} Si se normaliza a $p(x) = 1 - x^2$ y se tiene que $w'/w = \beta / (1+x) + \alpha/(1-x)$. Al resolver se tiene que, salvo constantes, $w(x) = (1-x)^{\alpha} (1+x)^{\beta}$. Las condiciones de frontera para $pw = (1 - x^2)w = (1-x)^{\alpha+1} (1+x)^{\beta+1}$ con el intervalo acotado cerrado $Int = [-1, 1]$ con $\alpha, \beta > -1$. El polinomio $q = ((1 - x^2)w)'/w = -(\alpha+\beta+2)x + \beta - \alpha$ es un polinomio de grado 1. Por lo tanto, el operador $D$ es:
+\begin{equation}
+D = (1 - x^2)\frac{d^2}{dx^2} + [ -(\alpha+\beta+2)x + \beta - \alpha] \frac{d}{dx}.
+\end{equation} 
+
+Por cada polinomio de grado $n$, el operador $D$ lo lleva a otro polinomio del mismo grado. El valor generador para este caso, igualando coeficientes, es $\lambda_n = -n(n+\alpha+\beta+1)$. Los polinomios ortogonales con respecto al peso $(1-x)^{\alpha} (1+x)^{\beta}$ son los polinomios de Jacobi $J^{\alpha, \beta}_n(x)$ y cumplen con $DJ^{\alpha, \beta}_n = -n (n+\alpha+\beta+1) J^{\alpha, \beta}_n$. 
+
+\item{$p$ cuadrático con raíces complejas distintas:} se normaliza a $p(x) = 1 + x^2$ y se tiene que $w'/w = (-2ax+b)/(1+x^2)$. Al resolver se tiene que, salvo constantes, $w(x) = (1+x^2)^{-a} e^{b tan^{-1}(x)}$. Las condiciones de frontera y la positividad e integrabilidad del peso $w$ obligan a que el intervalo de ortogonalidad sea $Int = (-\infty, \infty)$ y que $a>1/2$, $b \in \mathbb{R}$. El polinomio  $q = ((1 + x^2)w)'/w = 2x(1-a)+b$ es un polinomio de grado 1. Por lo tanto, el operador $D$ es:
+
+\begin{equation}
+D = (1 + x^2)\frac{d^2}{dx^2} + [2x(1-a)+b] \frac{d}{dx}. \nonumber
+\end{equation} 
+
+Por cada polinomio de grado $D$, el operador $L$ lo lleva a otro polinomio del mismo grado. El valor generador para este caso, igualando coeficientes, es $\lambda_n = n(n+1 - 2a)$. Solamente se pueden construir polinomios bajo la condición $n < 2a-1$, además, bajo esta condición, el valor generador $\lambda_n$ es negativo. Los polinomios Romanovski se pueden construir bajo estas condiciones.
+
+\item{$p$ cuadrático con raíz doble:} se normaliza a $p(x) = x^2$ y se tiene que $w'/w = -a/x + b/x^2$. Al resolver se tiene que, salvo constantes, $w(x) = x^{-a} e^{-b/x}$. Las condiciones de frontera y la positividad e integrabilidad del peso $w$ obligan a que el intervalo de ortogonalidad sea $Int = [0, \infty)$ y que $a>-1$, $b \geq 0$. El polinomio  $q = ((x^2 w)'/w = x(2-a)+b$ es un polinomio de grado 1. Por lo tanto, el operador $D$ es:
+
+\begin{equation}
+D = x^2\frac{d^2}{dx^2} + [x(2-a)+b] \frac{d}{dx}. \nonumber
+\end{equation}  
+
+El valor generador para este caso, igualando coeficientes, es $\lambda_n = n(n+1 - a)$. De nuevo, sólo hay un número finito de polinomios ortogonales y la condición es $n < a-1$.
+
+\end{enumerate}
