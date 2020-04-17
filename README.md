@@ -62,4 +62,6 @@ donde <img src="/tex/a7024fd20adb1541682356994daf0449.svg?invert_in_darkmode&san
 
 A este tipo de operadores diferenciales se les denomina de tipo hipergeométrico o de tipo Sturm-Liouville. A la ecuación \ref{eq_pearson} se le denomina como la ecuación de Pearson.
 
+Dado que <img src="/tex/2ec6e630f199f589a2402fdf3e0289d5.svg?invert_in_darkmode&sanitize=true" align=middle width=8.270567249999992pt height=14.15524440000002pt/> es un polinomio de grado máximo 2, después de normalizaciones (mapeos afines de la recta, multiplicación del peso, el operador y los polinomios por constantes) se obtiene que existen 5 tipos de familias de polinomios ortogonales que son funciones generadoras del operador diferencial hipergeométrico <img src="/tex/78ec2b7008296ce0561cf83393cb746d.svg?invert_in_darkmode&sanitize=true" align=middle width=14.06623184999999pt height=22.465723500000017pt/> (ecuación \ref{SL_eq}) dependiendo del grado y las raíces de <img src="/tex/2ec6e630f199f589a2402fdf3e0289d5.svg?invert_in_darkmode&sanitize=true" align=middle width=8.270567249999992pt height=14.15524440000002pt/>:
 
+<p align="center"><img src="/tex/e76792f5c0e9881d3333367f3fc8a84b.svg?invert_in_darkmode&sanitize=true" align=middle width=680.1833676pt height=1328.8053223499999pt/></p>
