@@ -133,7 +133,7 @@ Un aspecto que hay que tener en cuenta es que $\lambda$ no sólo es una constant
 En conclusión tenemos que, salvo normalizaciones, las únicas familias de polinomios ortogonales que son funciones generadoras de un operador diferencial de segundo orden que obedece a la ecuación \ref{Simetria_D}, es decir, un operador diferencial simétrico con respecto a un peso $w$ positivo soportado dentro de la recta real, son las familias de Hermite, Laguerre y Jacobi. A estas familias se les suele denominar polinomios ortogonales clásicos. En la Tabla \ref{Carac_POC} se muestra un resumen de las características de las familias clásicas.
 
 | Funciones     | Hermite $H_n(x)$   | Laguerre $L^{\alpha}_n(x)$| Jacobi $J^{\alpha, \beta}_n(x)$        |
-| ------------- |:------------------:|:-------------------------:| --------------------------------------:|
+| :------------:|:------------------:|:-------------------------:| :-------------------------------------:|
 | $Int = [a,b]$ | $(-\infty, \infty)$| $[0, \infty)$             | $[-1, 1]$                              |
 | $w(x)$        | $e^{-x^2}$         | $x^{\alpha} e^{-x}$       | $(1-x)^{\alpha} (1+x)^{\beta}$         |
 | $\sigma(x)$   | 1                  | $x$                       | $1-x^2$                                |
