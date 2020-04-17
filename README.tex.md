@@ -1,6 +1,6 @@
 # Hermite
 La transformada Hermite como herramienta para el procesamiento digital de señales.
-## Polinomios de Hermite
+## Polinomios ortogonales clásicos
 La ecuación diferencial general lineal de segundo orden en el intervalo definido entre $-\infty$ a $\infty$, $Int = (-\infty, \infty)$, es:
 \begin{equation}
 p(x)u''(x) + q(x)u'(x)+r(x)u(x) = f(x), \qquad \qquad (1) \nonumber
@@ -100,11 +100,45 @@ A este tipo de operadores diferenciales se les denomina de tipo hipergeométrico
 
 Dado que $p$ es un polinomio de grado máximo 2, después de normalizaciones (mapeos afines de la recta, multiplicación del peso, el operador y los polinomios por constantes) se obtiene que existen 5 tipos de familias de polinomios ortogonales que son funciones generadoras del operador diferencial hipergeométrico $D$ (ecuación \ref{SL_eq}) dependiendo del grado y las raíces de $p$:
 
-1. $p$ constante: polinomios de Hermite.
-2. $p$ lineal: polinomios de Laguerre. 
-3. $p$ cuadátrico con raíces reales distintas: polinomios de Jacobi. 
-4. $p$ cuadátrico con raíces complejas distintas: polinomios de Romanovski.
+1. $p$ constante: polinomios de **Hermite**.
+2. $p$ lineal: polinomios de **Laguerre**. 
+3. $p$ cuadátrico con raíces reales distintas: polinomios de **Jacobi**. 
+4. $p$ cuadátrico con raíces complejas distintas: polinomios de **Romanovski**.
 5. $p$ cuadrático con raíz doble: varias familias de polinomios.
+
+Muchos problemas de matemáticas aplicadas y teóricas así como problemas de física conducen a ecuaciones de la forma:
+
+\begin{equation}
+\sigma(x) u'' + \tau(x)u' + \lambda u = 0,
+\label{eq1_DH}
+\end{equation}
+
+donde $\lambda$ es una constante y $\sigma(x)$ y $\tau(x)$ son polinomios de, al menos, segundo y primer grado, respectivamente. A esta ecuación se le conoce como ecuación diferencial del tipo hipergeométrico y se obtiene a través de las ecuaciones \ref{Simetria_D} y \ref{OPDyLam} e igualando:
+
+\begin{equation*}
+\sigma = p,
+\end{equation*}
+\begin{equation*}
+\tau = q = \frac{(pw)'}{w}
+\end{equation*}
+
+y
+
+\begin{equation*}
+\lambda = r.
+\end{equation*}
+
+Un aspecto que hay que tener en cuenta es que $\lambda$ no sólo es una constante sino que además es el valor generador del operador $D$. Por otro lado, la relación que existe entre $\sigma(x)$ y $\tau(x)$ en la ecuación \ref{eq1_DH} está dada por la ecuación de Pearson, ecuación \ref{eq_pearson}, que indica que $\tau(x)$ es derivada de $\sigma(x)$, siempre y cuando ambas estén multiplicadas por el peso $w$.
+
+En conclusión tenemos que, salvo normalizaciones, las únicas familias de polinomios ortogonales que son funciones generadoras de un operador diferencial de segundo orden que obedece a la ecuación \ref{Simetria_D}, es decir, un operador diferencial simétrico con respecto a un peso $w$ positivo soportado dentro de la recta real, son las familias de Hermite, Laguerre y Jacobi. A estas familias se les suele denominar polinomios ortogonales clásicos. En la Tabla \ref{Carac_POC} se muestra un resumen de las características de las familias clásicas.
+
+| Funciones     | Hermite $H_n(x)$   | Laguerre $L^{\alpha}_n(x)$| Jacobi $J^{\alpha, \beta}_n(x)$        |
+| ------------- |:------------------:|:-------------------------:| --------------------------------------:|
+| $Int = [a,b]$ | $(-\infty, \infty)$| $[0, \infty)$             | $[-1, 1]$                              |
+| $w(x)$        | $e^{-x^2}$         | $x^{\alpha} e^{-x}$       | $(1-x)^{\alpha} (1+x)^{\beta}          |
+| $\sigma(x)$   | 1                  | $x$                       | $1-x^2$                                |
+| $\tau(x)$     | $-2x$              | $1+\alpha-x$              | $ -(\alpha+\beta+2)x + \beta - \alpha$ |
+| $\lambda_n$   | $2n$               | $n$                       | $-n(n+\alpha+\beta+1)$                 |
 
 ## Polinomios de Hermite
 
