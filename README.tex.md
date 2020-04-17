@@ -135,10 +135,11 @@ En conclusión tenemos que, salvo normalizaciones, las únicas familias de polin
 | Funciones     | Hermite $H_n(x)$   | Laguerre $L^{\alpha}_n(x)$| Jacobi $J^{\alpha, \beta}_n(x)$        |
 | ------------- |:------------------:|:-------------------------:| --------------------------------------:|
 | $Int = [a,b]$ | $(-\infty, \infty)$| $[0, \infty)$             | $[-1, 1]$                              |
-| $w(x)$        | $e^{-x^2}$         | $x^{\alpha} e^{-x}$       | $(1-x)^{\alpha} (1+x)^{\beta}          |
+| $w(x)$        | $e^{-x^2}$         | $x^{\alpha} e^{-x}$       | $(1-x)^{\alpha} (1+x)^{\beta}$         |
 | $\sigma(x)$   | 1                  | $x$                       | $1-x^2$                                |
 | $\tau(x)$     | $-2x$              | $1+\alpha-x$              | $ -(\alpha+\beta+2)x + \beta - \alpha$ |
 | $\lambda_n$   | $2n$               | $n$                       | $-n(n+\alpha+\beta+1)$                 |
+
 
 ## Polinomios de Hermite
 
