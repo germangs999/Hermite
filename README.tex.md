@@ -205,7 +205,7 @@ Los coeficientes $L_{m, n-m}(p,q)$ de la transformada se pueden obtener convoluc
 Polinomios de Hermite      |  Polinomios Normalizados de Hermite
 :-------------------------:|:-----------------------------------:
 ![Image1](Imagenes/HT2.png)  |  ![Image2](Imagenes/dht2.png)
-
+Comparacion entre los dos polinomiuos de hermite
 
 .center[
 ![Image](Imagenes/HT2.png)
