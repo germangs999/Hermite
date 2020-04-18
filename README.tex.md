@@ -217,13 +217,13 @@ Una de las virtudes más reconocidas de la transformada de Hermite es su capacid
 Para el proceso de rotación bidimensional, se obtiene la transformada de Fourier de los filtros definidos en la ecuación **9**:
 
 \begin{equation}
-Hf_{m, n-m}(\omega_x , \omega_y) = \frac{1}{\sqrt{2^n (n-m)! m!}} \left[ (j \omega_x \sigma)^m (j \omega_x \sigma)^{n-m} F(\omega_x, \omega_y) \right],  \nonumber
+Hf_{m, n-m}(\omega_x , \omega_y) = \frac{1}{\sqrt{2^n (n-m)! m!}} \left[ (j \omega_x \sigma)^m (j \omega_y \sigma)^{n-m} F(\omega_x, \omega_y) \right], \qquad \qquad (10) \nonumber
 \end{equation}
 
 donde $F(\omega_x, \omega_y)$ es la transformada de Fourier de $V^2(x,y)$. La rotación definida en coordenadas cartesianas para el caso bidimensional se define como:
 
-\begin{equation*} % Entorno desde el cual pueden usarse los entornos y funciones matematicas
-\begin{bmatrix} % El entorno bmatrix puede generar vectores tambien, en ese caso uno de 1 x 3
+\begin{equation*}
+\begin{bmatrix}
 x_r \\
 y_r
 \end{bmatrix}
@@ -237,6 +237,58 @@ x \\
 y
 \end{bmatrix}
 \end{equation*}
+
+Una rotación en el dominio espacial es equivalente a una rotación en el dominio de la frecuencia. Por lo tanto, la definición anterior aplica para las coordenadas en el dominio de la frecuencia. Reemplazando las coordenadas rotadas en la ecuación **10** se obtiene:
+
+\begin{equation*}
+HR^r_{m, n-m}(\omega_x , \omega_y, \theta) = \frac{1}{\sqrt{2^n (n-m)! m!}}  \left[ (j \sigma (\omega_x cos \theta + \omega_y sen \theta) )^m (j \sigma (-\omega_x sen \theta +\omega_y cos \theta) )^{n-m} F(\omega_x, \omega_y) \right].  \qquad \qquad (11)\nonumber
+\end{equation*}
+
+Desarrollando la ecuación **11** y usando la transformada de Fourier inversa podemos obtener los filtros de Hermite rotados para un orden $n \geq 1$. Dado que los coeficientes de la TH son obtenidos por un proceso de convolución entre la imagen de entrada y los filtros, es posible obtener los coeficientes rotados a partir de los cartesianos usando la ecuación **11**. Hay que resaltar que la
+función Gaussiana es isotrópica, por lo cual no sufre modificaciones en el desarrollo anterior. Por ejemplo, los coeficientes de Hermite para los primeros dos órdenes son:
+
+* Para $n = 1$,
+
+\begin{equation*}
+\begin{bmatrix}
+L_{01}(\theta) \\
+L_{10}(\theta)
+\end{bmatrix}
+=
+\begin{bmatrix} 
+c & s\\
+-s& c 
+\end{bmatrix}
+\begin{bmatrix}
+L_{01} \\
+L_{10}
+\end{bmatrix}
+\end{equation*}
+
+* Para $n = 2$,
+
+\begin{equation*}
+\begin{bmatrix}
+L_{02}(\theta) \\
+L_{11}(\theta) \\
+L_{20}(\theta)
+\end{bmatrix}
+=
+\begin{bmatrix} 
+c^2 & 2cs & s^2\\
+-cs & c^2-s^2 & cs \\
+s^2 & -2cs & c^2
+\end{bmatrix}
+\begin{bmatrix}
+L_{02} \\
+L_{11} \\
+L_{20}
+\end{bmatrix},
+\end{equation*}
+
+donde $c = cos (\theta)$ y $s = sin(theta)$. De la misma forma se pueden obtener los coeficientes rotados para órdenes más altos de la transformada.
+
+
 
 
 
