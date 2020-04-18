@@ -182,6 +182,12 @@ Sustituyendo las definiciones dadas anteriormente de Gn(x) y V(x) en la ecuació
 hf_n(x) = \frac{1}{\sqrt{2^n n!}} \left[  \frac{d^n}{d(x/\sigma)^n} \left( \frac{1}{\sigma \sqrt{\pi}} e^{-(x/ \sigma)^2} \right) \right]  \nonumber
 \end{equation}
 
+En la siguiente imagen se presenta la comparación entre los polinomios y polinomios normalizados de Hermite, la diferencia principal radica en la multiplicación de los mismos por la fu7nción gaussiana.
+
+Polinomios de Hermite        |  Polinomios Normalizados de Hermite
+:---------------------------:|:-----------------------------------:
+![Image1](Imagenes/HT2.png)  |  ![Image2](Imagenes/dht2.png)
+
 La transformada de Hermite bidimensional **TH2D** se define de forma similar. Sea $f(x,y)$ la función de entrada, entonces su TH2D se define como: 
 
 \begin{equation}
@@ -202,23 +208,8 @@ hf_{m, n-m}(x,y) = \frac{1}{\sqrt{2^n (n-m)! m!}} \left( \frac{d^m}{d(x/\sigma)^
 
 Los coeficientes $L_{m, n-m}(p,q)$ de la transformada se pueden obtener convolucionando el conjunto de filtros hf_{m, n-m}(x,y) con la función de entrada $f(x,y)$ y luego submuestreando en las posiciones $(p,q)$.
 
-Polinomios de Hermite      |  Polinomios Normalizados de Hermite
-:-------------------------:|:-----------------------------------:
-![Image1](Imagenes/HT2.png)  |  ![Image2](Imagenes/dht2.png)
-Comparacion entre los dos polinomiuos de hermite
 
-.center[
-![Image](Imagenes/HT2.png)
-.caption[
-**Fig. 1:** Polinomios de Hermite
-]
-]
 
-.center[
-![Image of Yaktocat](Imagenes/dht2.png)
-.caption[
-**Fig. 2:** Polinomios Normalizados de Hermite
-]
-]
+
 
 
