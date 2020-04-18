@@ -215,7 +215,7 @@ Los coeficientes $L_{m, n-m}(p,q)$ de la transformada se pueden obtener convoluc
 .center[
 ![Image of Yaktocat](Imagenes/dht2.png)
 .caption[
-**Fig. 1:** Polinomios Normalizados de Hermite
+**Fig. 2:** Polinomios Normalizados de Hermite
 ]
 ]
 
