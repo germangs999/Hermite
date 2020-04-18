@@ -127,7 +127,7 @@ Sustituyendo las definiciones dadas anteriormente de Gn(x) y V(x) en la ecuació
 
 <p align="center"><img src="/tex/5ebfbef2d13367175803180d4ff630ee.svg?invert_in_darkmode&sanitize=true" align=middle width=323.9190801pt height=39.452455349999994pt/></p>
 
-En la siguiente imagen se presenta la comparación entre los polinomios y polinomios normalizados de Hermite, la diferencia principal radica en la multiplicación de los mismos por la fu7nción gaussiana.
+En la siguiente imagen se presenta la comparación entre los polinomios y polinomios normalizados de Hermite, la diferencia principal radica en la multiplicación de los mismos por la función gaussiana.
 
 Polinomios de Hermite        |  Polinomios Normalizados de Hermite
 :---------------------------:|:-----------------------------------:
@@ -143,10 +143,23 @@ donde  <img src="/tex/ba84a6e7f5a544950bedc9566906f7c6.svg?invert_in_darkmode&sa
 
 Sustituyendo y usando las propiedades de los polinomios de Hermite, se obtienen los filtros de Hermite bidimensionales: 
 
-<p align="center"><img src="/tex/e4824aaf7f37240b6f908aced813ce85.svg?invert_in_darkmode&sanitize=true" align=middle width=480.97471289999993pt height=42.7846815pt/></p>
+<p align="center"><img src="/tex/f3559b823054144a256c1f5a6d8325bb.svg?invert_in_darkmode&sanitize=true" align=middle width=570.47248665pt height=42.7846815pt/></p>
 
-Los coeficientes <img src="/tex/54fb4cee4f68197ce1599d1320269e81.svg?invert_in_darkmode&sanitize=true" align=middle width=93.93295229999998pt height=24.65753399999998pt/> de la transformada se pueden obtener convolucionando el conjunto de filtros hf_{m, n-m}(x,y) con la función de entrada <img src="/tex/e00e75871b4e789e5c465fdab29fa79a.svg?invert_in_darkmode&sanitize=true" align=middle width=47.95292369999999pt height=24.65753399999998pt/> y luego submuestreando en las posiciones <img src="/tex/1aefc804693a429f4523ba2e69df5d88.svg?invert_in_darkmode&sanitize=true" align=middle width=36.28997129999999pt height=24.65753399999998pt/>.
+Los coeficientes <img src="/tex/54fb4cee4f68197ce1599d1320269e81.svg?invert_in_darkmode&sanitize=true" align=middle width=93.93295229999998pt height=24.65753399999998pt/> de la transformada se pueden obtener convolucionando el conjunto de filtros hf_{m, n-m}(x,y) con la función de entrada <img src="/tex/e00e75871b4e789e5c465fdab29fa79a.svg?invert_in_darkmode&sanitize=true" align=middle width=47.95292369999999pt height=24.65753399999998pt/> y luego submuestreando en las posiciones <img src="/tex/1aefc804693a429f4523ba2e69df5d88.svg?invert_in_darkmode&sanitize=true" align=middle width=36.28997129999999pt height=24.65753399999998pt/>. Los filtros bidimensionales de Hermite hasta el orden <img src="/tex/aa6905d780872f0007f642420d7a2d9c.svg?invert_in_darkmode&sanitize=true" align=middle width=40.00371704999999pt height=21.18721440000001pt/> se muestran en la siguiente figura:
 
+![Image3](Imagenes/dht2D.png)
+
+## Transformada de Hermite Rotada
+
+Una de las virtudes más reconocidas de la transformada de Hermite es su capacidad para hacer análisis direccional. Dado que en las imágenes y volúmenes es común encontrar patrones unidimensionales orientados, las transformadas direccionales llegan a ser de mucha utilidad. Los bordes y la textura son dos de las características más importantes que se pueden analizar usando procesamiento direccional. La TH cumple eficientemente con esta propiedad de rotación. Un filtro en una dirección determinada puede ser obtenido a través de una combinación lineal de unos filtros base, los cuales han sido definidos previamente en alguna dirección original. Este mismo concepto se puede extender a datos que han sido filtrados previamente con esos filtros base. Los coeficientes cartesianos de la TH en cada orden, para <img src="/tex/8fa66d8b80ce643977d63a6f345785b9.svg?invert_in_darkmode&sanitize=true" align=middle width=40.00371704999999pt height=21.18721440000001pt/>, son un conjunto base con el cual se pueden obtener coeficientes rotados a cierto ángulo determinado. Para llevar a cabo la rotación, se parte de la definición de los filtros de Hermite en el dominio de Fourier.
+
+Para el proceso de rotación bidimensional, se obtiene la transformada de Fourier de los filtros definidos en la ecuación **9**:
+
+<p align="center"><img src="/tex/784039f4121688691602fb04a9a3b416.svg?invert_in_darkmode&sanitize=true" align=middle width=501.12663315000003pt height=40.289634pt/></p>
+
+donde <img src="/tex/c3ece3a75fed601ac0ee788147cf4541.svg?invert_in_darkmode&sanitize=true" align=middle width=69.58726994999999pt height=24.65753399999998pt/> es la transformada de Fourier de <img src="/tex/42946edc78445858d235e3bec98fee85.svg?invert_in_darkmode&sanitize=true" align=middle width=58.75200209999999pt height=26.76175259999998pt/>. La rotación definida en coordenadas cartesianas para el caso bidimensional se define como:
+
+<p align="center"><img src="/tex/9512f903f7093a0cf0a54c1355538726.svg?invert_in_darkmode&sanitize=true" align=middle width=198.80539635pt height=39.452455349999994pt/></p>
 
 
 
