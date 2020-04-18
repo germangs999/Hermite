@@ -163,7 +163,7 @@ donde <img src="/tex/c3ece3a75fed601ac0ee788147cf4541.svg?invert_in_darkmode&san
 
 Una rotación en el dominio espacial es equivalente a una rotación en el dominio de la frecuencia. Por lo tanto, la definición anterior aplica para las coordenadas en el dominio de la frecuencia. Reemplazando las coordenadas rotadas en la ecuación **10** se obtiene:
 
-<p align="center"><img src="/tex/046077ccc55a95e05cd15422cf8f9aa8.svg?invert_in_darkmode&sanitize=true" align=middle width=859.5445237499999pt height=40.289634pt/></p>
+<p align="center"><img src="/tex/df5c73d0604e5d92d06885863af2b635.svg?invert_in_darkmode&sanitize=true" align=middle width=857.6338468499999pt height=40.289634pt/></p>
 
 Desarrollando la ecuación **11** y usando la transformada de Fourier inversa podemos obtener los filtros de Hermite rotados para un orden <img src="/tex/8fa66d8b80ce643977d63a6f345785b9.svg?invert_in_darkmode&sanitize=true" align=middle width=40.00371704999999pt height=21.18721440000001pt/>. Dado que los coeficientes de la TH son obtenidos por un proceso de convolución entre la imagen de entrada y los filtros, es posible obtener los coeficientes rotados a partir de los cartesianos usando la ecuación **11**. Hay que resaltar que la
 función Gaussiana es isotrópica, por lo cual no sufre modificaciones en el desarrollo anterior. Por ejemplo, los coeficientes de Hermite para los primeros dos órdenes son:
@@ -176,9 +176,16 @@ función Gaussiana es isotrópica, por lo cual no sufre modificaciones en el des
 
 <p align="center"><img src="/tex/db1577bd495f0da539c35990d99a76b6.svg?invert_in_darkmode&sanitize=true" align=middle width=294.12497895pt height=59.1786591pt/></p>
 
-donde <img src="/tex/93841b4479b43ec19b60fc47f8c76b09.svg?invert_in_darkmode&sanitize=true" align=middle width=72.77772974999998pt height=24.65753399999998pt/> y <img src="/tex/816bea0b2d8e1d65462ef747f36ded33.svg?invert_in_darkmode&sanitize=true" align=middle width=103.33072694999998pt height=24.65753399999998pt/>. De la misma forma se pueden obtener los coeficientes rotados para órdenes más altos de la transformada.
+donde <img src="/tex/93841b4479b43ec19b60fc47f8c76b09.svg?invert_in_darkmode&sanitize=true" align=middle width=72.77772974999998pt height=24.65753399999998pt/> y <img src="/tex/08818578f0d08c677ae09fa1f4dc9fd4.svg?invert_in_darkmode&sanitize=true" align=middle width=73.81765214999999pt height=24.65753399999998pt/>. De la misma forma se pueden obtener los coeficientes rotados para órdenes más altos de la transformada.
 
+Finalmente, la **TH** presenta algunas ventajas con respecto a otros modelos de descomposición, las cuales han motivado el uso de esta transformada en este proyecto. Algunas de estas ventajas son:
 
+* Es considerado un modelo de visión.
+* Permite hacer análisis direccional.
+* Las funciones bases de la descomposición son ortogonales.
+* Los filtros son separables, lo cual permite una fácil implementación en varias dimensiones.
+* El submuestreo es definido por el usuario.
+* Permite hacer análisis multiescala y multiresolución.
 
 
 
