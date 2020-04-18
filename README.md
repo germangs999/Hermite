@@ -107,4 +107,43 @@ Por cada polinomio de grado <img src="/tex/55a049b8f161ae7cfeb0197d75aff967.svg?
 
 La transformada de Hermite (**TH**) es uan herramienta matemática que permite hacer una descomposición ortogonal de funciones. Fue desarrollada en los años 90 y desde entonces ha sido utilizada en muchas aplicaciones de análisis de imágenes. En esta herramienta, se usan los **polinomios de Hermite** como las funciones base de la descomposición.
 
-Sea <img src="/tex/1eb8b648a9f2fb2977feb84b94502ec2.svg?invert_in_darkmode&sanitize=true" align=middle width=62.994853349999985pt height=24.65753399999998pt/> el polinomio de Hermite de grado <img src="/tex/55a049b8f161ae7cfeb0197d75aff967.svg?invert_in_darkmode&sanitize=true" align=middle width=9.86687624999999pt height=14.15524440000002pt/> y <img src="/tex/5674b08c96bade81bc2589fdacd5cd38.svg?invert_in_darkmode&sanitize=true" align=middle width=170.1712155pt height=27.77565449999998pt/>
+Sea <img src="/tex/1eb8b648a9f2fb2977feb84b94502ec2.svg?invert_in_darkmode&sanitize=true" align=middle width=62.994853349999985pt height=24.65753399999998pt/> el polinomio de Hermite de grado <img src="/tex/55a049b8f161ae7cfeb0197d75aff967.svg?invert_in_darkmode&sanitize=true" align=middle width=9.86687624999999pt height=14.15524440000002pt/> y <img src="/tex/5674b08c96bade81bc2589fdacd5cd38.svg?invert_in_darkmode&sanitize=true" align=middle width=170.1712155pt height=27.77565449999998pt/> el polinomio normalizado, con <img src="/tex/2f455827dcf8a3e1a73d5fafc08cc734.svg?invert_in_darkmode&sanitize=true" align=middle width=108.49662779999997pt height=21.18721440000001pt/>. Estos polinomios son ortogonales con respecto a una función gaussiana <img src="/tex/a286cd8d39da37558807381720258ea1.svg?invert_in_darkmode&sanitize=true" align=middle width=19.79457809999999pt height=26.76175259999998pt/>, es decir:
+
+<p align="center"><img src="/tex/533d0c8c0ea2e230a47ab220d5d02f8b.svg?invert_in_darkmode&sanitize=true" align=middle width=220.68793559999997pt height=39.61228755pt/></p>
+
+para <img src="/tex/54ca4fff6191b4190e6bf7a018106c37.svg?invert_in_darkmode&sanitize=true" align=middle width=46.21760714999999pt height=14.15524440000002pt/> y donde <img src="/tex/db9583b7ccd3b9a6746ee896309ac57c.svg?invert_in_darkmode&sanitize=true" align=middle width=160.62324134999997pt height=32.44583099999998pt/> y <img src="/tex/8cda31ed38c6d59d14ebefa440099572.svg?invert_in_darkmode&sanitize=true" align=middle width=9.98290094999999pt height=14.15524440000002pt/> es la desviación estándar de la función gaussiana. Dada una función <img src="/tex/7997339883ac20f551e7f35efff0a2b9.svg?invert_in_darkmode&sanitize=true" align=middle width=31.99783454999999pt height=24.65753399999998pt/>, definida en un espacio continuo, su **TH** de orden <img src="/tex/55a049b8f161ae7cfeb0197d75aff967.svg?invert_in_darkmode&sanitize=true" align=middle width=9.86687624999999pt height=14.15524440000002pt/> se define como:
+
+<p align="center"><img src="/tex/d03e67d2c9b635deef71dc46cf76d1ac.svg?invert_in_darkmode&sanitize=true" align=middle width=297.2703327pt height=39.61228755pt/></p>
+
+donde <img src="/tex/8fef960df797a3ca76647613dd13d15f.svg?invert_in_darkmode&sanitize=true" align=middle width=41.19118079999999pt height=24.65753399999998pt/> corresponden a los coeficientes cartesianos de la transformación. Dado que la función <img src="/tex/339ffb96dc41d7b037bcd8d1b264846d.svg?invert_in_darkmode&sanitize=true" align=middle width=35.42245244999999pt height=24.65753399999998pt/> define una ventana, la descomposición se debe hacer para las distintas posiciones <img src="/tex/2ec6e630f199f589a2402fdf3e0289d5.svg?invert_in_darkmode&sanitize=true" align=middle width=8.270567249999992pt height=14.15524440000002pt/> donde se requiere analizar la función.
+
+La implementación de la transformada se puede llevar a cabo a través de un proceso de convolución entre los filtros de Hermite y la función de entrada, y luego una operación de submuestreo en las posiciones de <img src="/tex/2ec6e630f199f589a2402fdf3e0289d5.svg?invert_in_darkmode&sanitize=true" align=middle width=8.270567249999992pt height=14.15524440000002pt/>.
+
+Los filtros de Hermite unidimensionales de orden <img src="/tex/55a049b8f161ae7cfeb0197d75aff967.svg?invert_in_darkmode&sanitize=true" align=middle width=9.86687624999999pt height=14.15524440000002pt/> son definidos como:
+
+<p align="center"><img src="/tex/67aec9b4d494fe75a9335d87ffc5d082.svg?invert_in_darkmode&sanitize=true" align=middle width=274.3102659pt height=18.312383099999998pt/></p>
+
+Sustituyendo las definiciones dadas anteriormente de Gn(x) y V(x) en la ecuación **7**: 
+
+<p align="center"><img src="/tex/5ebfbef2d13367175803180d4ff630ee.svg?invert_in_darkmode&sanitize=true" align=middle width=323.9190801pt height=39.452455349999994pt/></p>
+
+La transformada de Hermite bidimensional **TH2D** se define de forma similar. Sea <img src="/tex/e00e75871b4e789e5c465fdab29fa79a.svg?invert_in_darkmode&sanitize=true" align=middle width=47.95292369999999pt height=24.65753399999998pt/> la función de entrada, entonces su TH2D se define como: 
+
+<p align="center"><img src="/tex/827a8e560acdfe2b818619160a797ec9.svg?invert_in_darkmode&sanitize=true" align=middle width=527.80694175pt height=39.61228755pt/></p>
+
+donde  <img src="/tex/ba84a6e7f5a544950bedc9566906f7c6.svg?invert_in_darkmode&sanitize=true" align=middle width=210.43895565pt height=32.44583099999998pt/> es la ventana gaussiana con la cual se define la condición de ortogonalidad, <img src="/tex/b7aef6210a89f867e5a06c7881a5f0e3.svg?invert_in_darkmode&sanitize=true" align=middle width=361.85958105pt height=27.94496760000002pt/> son los polinomios de Hermite normalizados y <img src="/tex/54fb4cee4f68197ce1599d1320269e81.svg?invert_in_darkmode&sanitize=true" align=middle width=93.93295229999998pt height=24.65753399999998pt/> son los coeficientes de la transformada. Los índices de los polinomios varían como <img src="/tex/20c8760539761bbb5a6ca9592ec6abdf.svg?invert_in_darkmode&sanitize=true" align=middle width=108.49662779999997pt height=21.18721440000001pt/> y <img src="/tex/d4cb214ad29d9c6c348b7a00a16d2081.svg?invert_in_darkmode&sanitize=true" align=middle width=90.96623249999999pt height=21.18721440000001pt/>, donde <img src="/tex/55a049b8f161ae7cfeb0197d75aff967.svg?invert_in_darkmode&sanitize=true" align=middle width=9.86687624999999pt height=14.15524440000002pt/> es el orden de la transformada. Análogamente, se pueden definir los filtros de Hermite bidimensionales como:
+
+<p align="center"><img src="/tex/0dce9b2c6da2ce1fd729345ba237b0b2.svg?invert_in_darkmode&sanitize=true" align=middle width=422.76200175pt height=18.905967299999997pt/></p>
+
+Sustituyendo y usando las propiedades de los polinomios de Hermite, se obtienen los filtros de Hermite bidimensionales: 
+
+<p align="center"><img src="/tex/c01bc69769f56833dd3c496d4ff08cc5.svg?invert_in_darkmode&sanitize=true" align=middle width=480.9746601pt height=42.7846815pt/></p>
+
+Los coeficientes <img src="/tex/54fb4cee4f68197ce1599d1320269e81.svg?invert_in_darkmode&sanitize=true" align=middle width=93.93295229999998pt height=24.65753399999998pt/> de la transformada se pueden obtener convolucionando el conjunto de filtros hf_{m, n-m}(x,y) con la función de entrada <img src="/tex/e00e75871b4e789e5c465fdab29fa79a.svg?invert_in_darkmode&sanitize=true" align=middle width=47.95292369999999pt height=24.65753399999998pt/> y luego submuestreando en las posiciones <img src="/tex/1aefc804693a429f4523ba2e69df5d88.svg?invert_in_darkmode&sanitize=true" align=middle width=36.28997129999999pt height=24.65753399999998pt/>.
+
+
+
+
+
+
+
