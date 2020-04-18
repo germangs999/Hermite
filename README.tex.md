@@ -203,13 +203,44 @@ hf_{m, n-m}(x,y) = V^2(-x,-y) G_{m, n-m}(-x,-y) . \qquad \qquad (8) \nonumber
 Sustituyendo y usando las propiedades de los polinomios de Hermite, se obtienen los filtros de Hermite bidimensionales: 
 
 \begin{equation}
-hf_{m, n-m}(x,y) = \frac{1}{\sqrt{2^n (n-m)! m!}} \left( \frac{d^m}{d(x/\sigma)^m} \frac{d^{n-m}}{d(y/\sigma)^{n-m} }V^2(x,y).  \right) \nonumber
+hf_{m, n-m}(x,y) = \frac{1}{\sqrt{2^n (n-m)! m!}} \left( \frac{d^m}{d(x/\sigma)^m} \frac{d^{n-m}}{d(y/\sigma)^{n-m} }V^2(x,y).  \right) \qquad \qquad (9) \nonumber
 \end{equation}
 
 Los coeficientes $L_{m, n-m}(p,q)$ de la transformada se pueden obtener convolucionando el conjunto de filtros hf_{m, n-m}(x,y) con la función de entrada $f(x,y)$ y luego submuestreando en las posiciones $(p,q)$. Los filtros bidimensionales de Hermite hasta el orden $n=3$ se muestran en la siguiente figura:
 
 ![Image3](Imagenes/dht2D.png)
 
+## Transformada de Hermite Rotada
+
+Una de las virtudes más reconocidas de la transformada de Hermite es su capacidad para hacer análisis direccional. Dado que en las imágenes y volúmenes es común encontrar patrones unidimensionales orientados, las transformadas direccionales llegan a ser de mucha utilidad. Los bordes y la textura son dos de las características más importantes que se pueden analizar usando procesamiento direccional. La TH cumple eficientemente con esta propiedad de rotación. Un filtro en una dirección determinada puede ser obtenido a través de una combinación lineal de unos filtros base, los cuales han sido definidos previamente en alguna dirección original. Este mismo concepto se puede extender a datos que han sido filtrados previamente con esos filtros base. Los coeficientes cartesianos de la TH en cada orden, para $n \geq 1$, son un conjunto base con el cual se pueden obtener coeficientes rotados a cierto ángulo determinado. Para llevar a cabo la rotación, se parte de la definición de los filtros de Hermite en el dominio de Fourier.
+
+Para el proceso de rotación bidimensional, se obtiene la transformada de Fourier de los filtros definidos en la ecuación **9**:
+
+\begin{equation}
+Hf_{m, n-m}(\omega_x , \omega_y) = \frac{1}{\sqrt{2^n (n-m)! m!}} \left[ (j \omega_x \sigma)^m (j \omega_x \sigma)^{n-m} F(\omega_x, \omega_y) \right],  \nonumber
+\end{equation}
+
+donde $F(\omega_x, \omega_y)$ es la transformada de Fourier de $V^2(x,y)$. La rotación definida en coordenadas cartesianas para el caso bidimensional se define como:
+
+\begin{equation*} % Entorno desde el cual pueden usarse los entornos y funciones matematicas
+\begin{bmatrix} % El entorno bmatrix puede generar vectores tambien, en ese caso uno de 1 x 3
+u w'\\
+v w'\\
+w'
+\end{bmatrix}
+=
+\begin{bmatrix} 
+t_{11} & t_{12} & t_{13} & t_{14} \\
+t_{21} & t_{22} & t_{23} & t_{24} \\
+t_{31} & t_{32} & t_{33} & t_{34}
+\end{bmatrix}
+\begin{bmatrix}
+x \\
+y \\
+z \\
+w
+\end{bmatrix}
+\end{equation*}
 
 
 
