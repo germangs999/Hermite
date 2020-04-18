@@ -182,6 +182,29 @@ Sustituyendo las definiciones dadas anteriormente de Gn(x) y V(x) en la ecuació
 hf_n(x) = \frac{1}{\sqrt{2^n n!}} \left[  \frac{d^n}{d(x/\sigma)^n} \left( \frac{1}{\sigma \sqrt{\pi}} e^{-(x/ \sigma)^2} \right) \right]  \nonumber
 \end{equation}
 
+La transformada de Hermite bidimensional **TH2D** se define de forma similar. Sea $f(x,y)$ la función de entrada, entonces su TH2D se define como: 
+
+\begin{equation}
+L_{m, n-m}(p,q) = \int \int_{-\infty}^{\infty} f(x,y)V^2(x-p, y-q)G_{m, n-m}(x-p, y-q)dxdy, \nonumber
+\end{equation}
+
+donde  $V(x,y) = \frac{1}{\sqrt{\sigma \sqrt{\pi}}} e^{-(x^2+y^2)/2 \sigma^2 }$ es la ventana gaussiana con la cual se define la condición de ortogonalidad, $G_{m, n-m} (x,y) = \frac{1}{\sqrt{2^n (n-m)! m!}} H_m(x / \sigma) H_{n-m}(y / \sigma)$ son los polinomios de Hermite normalizados y $L_{m, n-m}(p,q)$ son los coeficientes de la transformada. Los índices de los polinomios varían como $n = 0,1, \ldots, \infty$ y $m = 0, \ldots, n$, donde $n$ es el orden de la transformada. Análogamente, se pueden definir los filtros de Hermite bidimensionales como:
+
+\begin{equation}
+hf_{m, n-m}(x,y) = V^2(-x,-y) G_{m, n-m}(-x,-y) . \qquad \qquad (8) \nonumber
+\end{equation}
+
+Sustituyendo y usando las propiedades de los polinomios de Hermite, se obtienen los filtros de Hermite bidimensionales: 
+
+\begin{equation}
+hf_{m, n-m}(x,y) = \frac{1}{\sqrt{2^n (n-m)! m!}} \left( \frac{d^m}{d(x/\sigma)^m} \frac{d^{n-m}}{d(y/\sigma)^{n-m} V^2(x,y)}.  \right) \nonumber
+\end{equation}
+
+Los coeficientes $L_{m, n-m}(p,q)$ de la transformada se pueden obtener convolucionando el conjunto de filtros hf_{m, n-m}(x,y) con la función de entrada $f(x,y)$ y luego submuestreando en las posiciones $(p,q)$.
+
+
+
+
 
 
 
