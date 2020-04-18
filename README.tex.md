@@ -154,4 +154,34 @@ Por cada polinomio de grado $n$, el operador $D$ lo lleva a otro polinomio del m
 
 La transformada de Hermite (**TH**) es uan herramienta matemática que permite hacer una descomposición ortogonal de funciones. Fue desarrollada en los años 90 y desde entonces ha sido utilizada en muchas aplicaciones de análisis de imágenes. En esta herramienta, se usan los **polinomios de Hermite** como las funciones base de la descomposición.
 
-Sea $H_n(x / \sigma)$ el polinomio de Hermite de grado $n$ y $G_n (x) = \frac{1}{\sqrt{2^n n!}} H_n(x / \sigma)$
+Sea $H_n(x / \sigma)$ el polinomio de Hermite de grado $n$ y $G_n (x) = \frac{1}{\sqrt{2^n n!}} H_n(x / \sigma)$ el polinomio normalizado, con $n = 0,1, \ldots , \infty$. Estos polinomios son ortogonales con respecto a una función gaussiana $V^2$, es decir:
+
+\begin{equation}
+\int_{-\infty}^{\infty} V^2 G_n(x) G_m(x) dx = \delta_{nm}, \nonumber
+\end{equation}
+
+para $n=m$ y donde $V(x) = \frac{1}{\sqrt{\sigma \sqrt{\pi}}} e^{-x^2/2 \sigma^2 }$ y $\sigma$ es la desviación estándar de la función gaussiana. Dada una función $f(x)$, definida en un espacio continuo, su **TH** de orden $n$ se define como:
+
+\begin{equation}
+L_n(p) = \int_{-\infty}^{\infty} f(x)V^2(x-p)G_n(x-p)dx, \nonumber
+\end{equation}
+
+donde $L_n(p)$ corresponden a los coeficientes cartesianos de la transformación. Dado que la función $V(x)$ define una ventana, la descomposición se debe hacer para las distintas posiciones $p$ donde se requiere analizar la función.
+
+La implementación de la transformada se puede llevar a cabo a través de un proceso de convolución entre los filtros de Hermite y la función de entrada, y luego una operación de submuestreo en las posiciones de $p$.
+
+Los filtros de Hermite unidimensionales de orden $n$ son definidos como:
+
+\begin{equation}
+hf_n(x) = G_n(-x) V^2(-x). \qquad \qquad (7) \nonumber
+\end{equation}
+
+Sustituyendo las definiciones dadas anteriormente de Gn(x) y V(x) en la ecuación **7**: 
+
+\begin{equation}
+hf_n(x) = \frac{1}{\sqrt{2^n n!}} \left[  \frac{d^n}{d(x/\sigma)^n} \left( \frac{1}{\sigma \sqrt{\pi}} e^{-(x/ \sigma)^2} \right) \right]  \nonumber
+\end{equation}
+
+
+
+
