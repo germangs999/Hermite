@@ -127,6 +127,12 @@ Sustituyendo las definiciones dadas anteriormente de Gn(x) y V(x) en la ecuació
 
 <p align="center"><img src="/tex/5ebfbef2d13367175803180d4ff630ee.svg?invert_in_darkmode&sanitize=true" align=middle width=323.9190801pt height=39.452455349999994pt/></p>
 
+En la siguiente imagen se presenta la comparación entre los polinomios y polinomios normalizados de Hermite, la diferencia principal radica en la multiplicación de los mismos por la fu7nción gaussiana.
+
+Polinomios de Hermite        |  Polinomios Normalizados de Hermite
+:---------------------------:|:-----------------------------------:
+![Image1](Imagenes/HT2.png)  |  ![Image2](Imagenes/dht2.png)
+
 La transformada de Hermite bidimensional **TH2D** se define de forma similar. Sea <img src="/tex/e00e75871b4e789e5c465fdab29fa79a.svg?invert_in_darkmode&sanitize=true" align=middle width=47.95292369999999pt height=24.65753399999998pt/> la función de entrada, entonces su TH2D se define como: 
 
 <p align="center"><img src="/tex/827a8e560acdfe2b818619160a797ec9.svg?invert_in_darkmode&sanitize=true" align=middle width=527.80694175pt height=39.61228755pt/></p>
@@ -141,8 +147,6 @@ Sustituyendo y usando las propiedades de los polinomios de Hermite, se obtienen 
 
 Los coeficientes <img src="/tex/54fb4cee4f68197ce1599d1320269e81.svg?invert_in_darkmode&sanitize=true" align=middle width=93.93295229999998pt height=24.65753399999998pt/> de la transformada se pueden obtener convolucionando el conjunto de filtros hf_{m, n-m}(x,y) con la función de entrada <img src="/tex/e00e75871b4e789e5c465fdab29fa79a.svg?invert_in_darkmode&sanitize=true" align=middle width=47.95292369999999pt height=24.65753399999998pt/> y luego submuestreando en las posiciones <img src="/tex/1aefc804693a429f4523ba2e69df5d88.svg?invert_in_darkmode&sanitize=true" align=middle width=36.28997129999999pt height=24.65753399999998pt/>.
 
-![Image of Yaktocat](Imagenes/dht2.png)
-![Image](Imagenes/HT2.png)
 
 
 
