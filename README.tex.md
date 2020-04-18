@@ -3,7 +3,7 @@ La transformada Hermite como herramienta para el procesamiento digital de señal
 ## Polinomios ortogonales clásicos
 La ecuación diferencial general lineal de segundo orden en el intervalo definido entre $-\infty$ a $\infty$, $Int = (-\infty, \infty)$, es:
 \begin{equation}
-p(x)u''(x) + q(x)u'(x)+r(x)u(x) = f(x), \qquad \qquad (1) \nonumber
+p(x)u''(x) + q(x)u'(x)+r(x)u(x) = f(x), \nonumber
 \end{equation}
 con su correspondiente ecuación homogénea:
 \begin{equation}
@@ -11,7 +11,7 @@ p(x)u''(x) + q(x)u'(x)+r(x)u(x) = 0 \nonumber
 \end{equation}
 y con el operador diferencial asociado:
 \begin{equation}
-D = p(x)\frac{d^2}{dx^2} + q(x)\frac{d}{dx} + r(x).  \qquad \qquad (2) \nonumber
+D = p(x)\frac{d^2}{dx^2} + q(x)\frac{d}{dx} + r(x).  \qquad \qquad (1) \nonumber
 \label{eq_OpDif}
 \end{equation}
 
@@ -28,7 +28,7 @@ donde $u$ y $v$ son un par de funciones que se anulan fuera del intervalo cerrad
 
 y con el peso $w>0$. Además, el operador diferencial $D$ simétrico con respecto al peso $w$ debe tener la siguiente forma:
 \begin{equation}
-D = p\frac{d^2}{dx^2} + \frac{(pw)'}{w}\frac{d}{dx} + r. \nonumber
+D = p\frac{d^2}{dx^2} + \frac{(pw)'}{w}\frac{d}{dx} + r. \qquad \qquad (2) \nonumber
 \label{Simetria_D}
 \end{equation}
 
@@ -96,9 +96,9 @@ donde $orden(p) \leq 2$, $orden(q) \leq 1$, $Dp_n = \lambda_n p_n$ y
 \label{eq_pearson}
 \end{equation} 
 
-A este tipo de operadores diferenciales se les denomina de tipo hipergeométrico o de tipo Sturm-Liouville. A la ecuación **4** se le denomina como la ecuación de Pearson.
+A este tipo de operadores diferenciales se les denomina de tipo hipergeométrico o de tipo Sturm-Liouville. A la ecuación **5** se le denomina como la ecuación de Pearson.
 
-Dado que $p$ es un polinomio de grado máximo 2, después de normalizaciones (mapeos afines de la recta, multiplicación del peso, el operador y los polinomios por constantes) se obtiene que existen 5 tipos de familias de polinomios ortogonales que son funciones generadoras del operador diferencial hipergeométrico $D$ (ecuación **3**) dependiendo del grado y las raíces de $p$:
+Dado que $p$ es un polinomio de grado máximo 2, después de normalizaciones (mapeos afines de la recta, multiplicación del peso, el operador y los polinomios por constantes) se obtiene que existen 5 tipos de familias de polinomios ortogonales que son funciones generadoras del operador diferencial hipergeométrico $D$ (ecuación **4**) dependiendo del grado y las raíces de $p$:
 
 1. $p$ constante: polinomios de **Hermite**.
 2. $p$ lineal: polinomios de **Laguerre**. 
@@ -130,7 +130,7 @@ y
 
 Un aspecto que hay que tener en cuenta es que $\lambda$ no sólo es una constante sino que además es el valor generador del operador $D$. Por otro lado, la relación que existe entre $\sigma(x)$ y $\tau(x)$ en la ecuación **6** está dada por la ecuación de Pearson que indica que $\tau(x)$ es derivada de $\sigma(x)$, siempre y cuando ambas estén multiplicadas por el peso $w$.
 
-En conclusión tenemos que, salvo normalizaciones, las únicas familias de polinomios ortogonales que son funciones generadoras de un operador diferencial de segundo orden que obedece a la ecuación **3**, es decir, un operador diferencial simétrico con respecto a un peso $w$ positivo soportado dentro de la recta real, son las familias de Hermite, Laguerre y Jacobi. A estas familias se les suele denominar polinomios ortogonales clásicos. En la siguiente Tabla se muestra un resumen de las características de las familias clásicas.
+En conclusión tenemos que, salvo normalizaciones, las únicas familias de polinomios ortogonales que son funciones generadoras de un operador diferencial de segundo orden que obedece a la ecuación **2**, es decir, un operador diferencial simétrico con respecto a un peso $w$ positivo soportado dentro de la recta real, son las familias de Hermite, Laguerre y Jacobi. A estas familias se les suele denominar polinomios ortogonales clásicos. En la siguiente Tabla se muestra un resumen de las características de las familias clásicas.
 
 | Funciones     | Hermite $H_n(x)$   | Laguerre $L^{\alpha}_n(x)$| Jacobi $J^{\alpha, \beta}_n(x)$        |
 | :------------:|:------------------:|:-------------------------:| :-------------------------------------:|
