@@ -85,14 +85,14 @@ La condición de simetría requiere que:
 para toda $u,v$ definida en el intervalo. Como se ha mencionado anteriormente, una condición necesaria para la simetría es que $pw \to 0$ en cada punto final del intervalo. Resumiendo, se buscan soluciones polinomiales $p_n(x)$ que sean funciones generadoras de un operador diferencial de la forma:
 
 \begin{equation}
-D = p\frac{d^2}{dx^2} + q\frac{d}{dx} = \frac{1}{w} \left( pw \frac{d}{dx}\right)',  \qquad \qquad (3) \nonumber
+D = p\frac{d^2}{dx^2} + q\frac{d}{dx} = \frac{1}{w} \left( pw \frac{d}{dx}\right)',  \qquad \qquad (4) \nonumber
 \label{SL_eq} 
 \end{equation}  
 
 donde $orden(p) \leq 2$, $orden(q) \leq 1$, $Dp_n = \lambda_n p_n$ y 
 
 \begin{equation}
-(pw)' = qw.  \qquad \qquad (4) \nonumber
+(pw)' = qw.  \qquad \qquad (5) \nonumber
 \label{eq_pearson}
 \end{equation} 
 
@@ -109,7 +109,7 @@ Dado que $p$ es un polinomio de grado máximo 2, después de normalizaciones (ma
 Muchos problemas de matemáticas aplicadas y teóricas así como problemas de física conducen a ecuaciones de la forma:
 
 \begin{equation}
-\sigma(x) u'' + \tau(x)u' + \lambda u = 0,  \qquad \qquad (ab) \nonumber
+\sigma(x) u'' + \tau(x)u' + \lambda u = 0,  \qquad \qquad (6) \nonumber
 \label{eq1_DH}
 \end{equation}
 
@@ -128,7 +128,7 @@ y
 \lambda = r.
 \end{equation*}
 
-Un aspecto que hay que tener en cuenta es que $\lambda$ no sólo es una constante sino que además es el valor generador del operador $D$. Por otro lado, la relación que existe entre $\sigma(x)$ y $\tau(x)$ en la ecuación **ab** está dada por la ecuación de Pearson que indica que $\tau(x)$ es derivada de $\sigma(x)$, siempre y cuando ambas estén multiplicadas por el peso $w$.
+Un aspecto que hay que tener en cuenta es que $\lambda$ no sólo es una constante sino que además es el valor generador del operador $D$. Por otro lado, la relación que existe entre $\sigma(x)$ y $\tau(x)$ en la ecuación **6** está dada por la ecuación de Pearson que indica que $\tau(x)$ es derivada de $\sigma(x)$, siempre y cuando ambas estén multiplicadas por el peso $w$.
 
 En conclusión tenemos que, salvo normalizaciones, las únicas familias de polinomios ortogonales que son funciones generadoras de un operador diferencial de segundo orden que obedece a la ecuación **3**, es decir, un operador diferencial simétrico con respecto a un peso $w$ positivo soportado dentro de la recta real, son las familias de Hermite, Laguerre y Jacobi. A estas familias se les suele denominar polinomios ortogonales clásicos. En la siguiente Tabla se muestra un resumen de las características de las familias clásicas.
 
