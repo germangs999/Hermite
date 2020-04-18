@@ -149,3 +149,9 @@ D = \frac{d^2}{dx^2} - 2x \frac{d}{dx}. \nonumber
 \end{equation}
 
 Por cada polinomio de grado $n$, el operador $D$ lo lleva a otro polinomio del mismo grado. El valor generador para este caso es $\lambda_n = -2n$. Los polinomios ortogonales con respecto al peso $e^{-x^2}$ son los polinomios de Hermite $H_n(x)$ y cumplen con $DH_n = -2nH_n$. Una vez que el peso $w(x)$ es normalizado, éste corresponde a la distribución normal o Gaussiana.
+
+## Transformada de Hermite
+
+La transformada de Hermite (**TH**) es uan herramienta matemática que permite hacer una descomposición ortogonal de funciones. Fue desarrollada en los años 90 y desde entonces ha sido utilizada en muchas aplicaciones de análisis de imágenes. En esta herramienta, se usan los **polinomios de Hermite** como las funciones base de la descomposición.
+
+Sea $H_n(x / \sigma)$ el polinomio de Hermite de grado $n$ y $G_n (x) = \frac{1}{\sqrt{2^n n!}} H_n(x / \sigma)$
