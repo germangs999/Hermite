@@ -137,11 +137,12 @@ donde  <img src="/tex/ba84a6e7f5a544950bedc9566906f7c6.svg?invert_in_darkmode&sa
 
 Sustituyendo y usando las propiedades de los polinomios de Hermite, se obtienen los filtros de Hermite bidimensionales: 
 
-<p align="center"><img src="/tex/c01bc69769f56833dd3c496d4ff08cc5.svg?invert_in_darkmode&sanitize=true" align=middle width=480.9746601pt height=42.7846815pt/></p>
+<p align="center"><img src="/tex/e4824aaf7f37240b6f908aced813ce85.svg?invert_in_darkmode&sanitize=true" align=middle width=480.97471289999993pt height=42.7846815pt/></p>
 
 Los coeficientes <img src="/tex/54fb4cee4f68197ce1599d1320269e81.svg?invert_in_darkmode&sanitize=true" align=middle width=93.93295229999998pt height=24.65753399999998pt/> de la transformada se pueden obtener convolucionando el conjunto de filtros hf_{m, n-m}(x,y) con la función de entrada <img src="/tex/e00e75871b4e789e5c465fdab29fa79a.svg?invert_in_darkmode&sanitize=true" align=middle width=47.95292369999999pt height=24.65753399999998pt/> y luego submuestreando en las posiciones <img src="/tex/1aefc804693a429f4523ba2e69df5d88.svg?invert_in_darkmode&sanitize=true" align=middle width=36.28997129999999pt height=24.65753399999998pt/>.
 
-
+![Image of Yaktocat](Imagenes/dht2.png)
+![Image](Imagenes/HT2.png)
 
 
 
