@@ -206,7 +206,9 @@ Sustituyendo y usando las propiedades de los polinomios de Hermite, se obtienen 
 hf_{m, n-m}(x,y) = \frac{1}{\sqrt{2^n (n-m)! m!}} \left( \frac{d^m}{d(x/\sigma)^m} \frac{d^{n-m}}{d(y/\sigma)^{n-m} }V^2(x,y).  \right) \nonumber
 \end{equation}
 
-Los coeficientes $L_{m, n-m}(p,q)$ de la transformada se pueden obtener convolucionando el conjunto de filtros hf_{m, n-m}(x,y) con la función de entrada $f(x,y)$ y luego submuestreando en las posiciones $(p,q)$.
+Los coeficientes $L_{m, n-m}(p,q)$ de la transformada se pueden obtener convolucionando el conjunto de filtros hf_{m, n-m}(x,y) con la función de entrada $f(x,y)$ y luego submuestreando en las posiciones $(p,q)$. Los filtros bidimensionales de Hermite hasta el orden $n=3$ se muestran en la siguiente figura:
+
+![Image3](Imagenes/dht2D.png)
 
 
 
