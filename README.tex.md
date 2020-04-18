@@ -202,7 +202,9 @@ hf_{m, n-m}(x,y) = \frac{1}{\sqrt{2^n (n-m)! m!}} \left( \frac{d^m}{d(x/\sigma)^
 
 Los coeficientes $L_{m, n-m}(p,q)$ de la transformada se pueden obtener convolucionando el conjunto de filtros hf_{m, n-m}(x,y) con la función de entrada $f(x,y)$ y luego submuestreando en las posiciones $(p,q)$.
 
-
+Polinomios de Hermite      |  Polinomios Normalizados de Hermite
+:-------------------------:|:-----------------------------------:
+![Image1](Imagenes/HT2.png)  |  ![Image2](Imagenes/dht2.png)
 
 
 .center[
