@@ -11,11 +11,11 @@ p(x)u''(x) + q(x)u'(x)+r(x)u(x) = 0 \nonumber
 \end{equation}
 y con el operador diferencial asociado:
 \begin{equation}
-D = p(x)\frac{d^2}{dx^2} + q(x)\frac{d}{dx} + r(x). \nonumber
+D = p(x)\frac{d^2}{dx^2} + q(x)\frac{d}{dx} + r(x).  \qquad \qquad (2) \nonumber
 \label{eq_OpDif}
 \end{equation}
 
-Las familias de polinomios ortogonales clásicos se pueden obtener a través de funciones generadoras del operador diferencial $D$, visto en la ecuación 1. Este operador diferencial $D$ debe cumplir con la condición de simetría con respecto al peso $w$, es decir, si:
+Las familias de polinomios ortogonales clásicos se pueden obtener a través de funciones generadoras del operador diferencial $D$, visto en la ecuación **1**. Este operador diferencial $D$ debe cumplir con la condición de simetría con respecto al peso $w$, es decir, si:
 \begin{equation}
 (Du,v) = (u,Dv), \nonumber
 \end{equation}
@@ -34,16 +34,16 @@ D = p\frac{d^2}{dx^2} + \frac{(pw)'}{w}\frac{d}{dx} + r. \nonumber
 
 A partir de estas definiciones y condiciones se precisa la extensión de la condición de simetría a una clase más larga de funciones y para lograrlo es necesario aplicar condiciones de frontera.
 
-Supongamos que las funciones $w$, $w'$, $p$, $p'$, $q$ y $r$ se extienden como funciones continuas en el intervalo cerrado $Int = [a, b]$. Además, $u$, $u'$, $v$ y $v'$ también son continuas en el mismo intervalo. Ahora, si el operador $D$ es simétrico, entonces: %son funciones que pertenecen al espacio de Hilbert $L^2_w$ 
+Suponiendo que las funciones $w$, $w'$, $p$, $p'$, $q$ y $r$ se extienden como funciones continuas en el intervalo cerrado $Int = [a, b]$. Además, $u$, $u'$, $v$ y $v'$ también son continuas en el mismo intervalo. Ahora, si el operador $D$ es simétrico, entonces:
+
 \begin{equation}
 (Du,v)-(u,Dv) = (pwu'v - pwuv') \Big|_a^b. \nonumber
 \end{equation}
 
-Si $pw$ se anula en ambos puntos de la frontera entonces no necesitamos condiciones adicionales en esa frontera, si no es así, se añaden condiciones sobre las funciones $u$ y $v$. De manera similar, si el intervalo es no acotado y semi infinito, $Int = [a, \infty)$, se deben imponer condiciones en $x = a$, a menos que $pw = 0$ en $x = a$. 
+Si $pw$ se anula en ambos puntos de la frontera entonces no necesitamos condiciones adicionales en esa frontera, si no es así, se añaden condiciones sobre las funciones $u$ y $v$. De manera similar, si el intervalo es no acotado y semi infinito, $Int = [a, \infty)$, se deben imponer condiciones en $x = a$, a menos que $pw = 0$ en $x = a$. Una función $u$ que no sea idénticamente cero es una función generadora para el operador $D$ con valor generador $-\lambda$ si:
 
-Una función $u$ que no sea idénticamente cero es una función generadora para el operador $D$ con valor generador $-\lambda$ si:
 \begin{equation}
-Du + \lambda u = 0. \nonumber
+Du + \lambda u = 0.  \qquad \qquad (3) \nonumber
 \label{OPDyLam}
 \end{equation}
 
@@ -62,7 +62,7 @@ En primer lugar, se hará la suposición de que el peso $w$ tiene integral finit
 \int_a^b w(x)dx < \infty. \nonumber
 \end{equation}
 
-Aplicando el operador $D$, cuya condición de simetría con respecto al peso se mostró en la ecuación \ref{Simetria_D}, a la función constante $u_0(x)=1$ obtenemos $Du_0 = r$, así que $r$ debe ser una constante y podemos considerar que $r = 0$. De esta forma, aplicando $D$ a $u_1(x) = x$ obtenemos:
+Aplicando el operador $D$, cuya condición de simetría con respecto al peso se mostró en la ecuación **2**, a la función constante $u_0(x)=1$ obtenemos $Du_0 = r$, así que $r$ debe ser una constante y podemos considerar que $r = 0$. De esta forma, aplicando $D$ a $u_1(x) = x$ obtenemos:
 
 \begin{equation}
 Du_1 = \frac{(pw)'}{w} = p' + p \frac{w'}{w}, \nonumber
@@ -85,20 +85,20 @@ La condición de simetría requiere que:
 para toda $u,v$ definida en el intervalo. Como se ha mencionado anteriormente, una condición necesaria para la simetría es que $pw \to 0$ en cada punto final del intervalo. Resumiendo, se buscan soluciones polinomiales $p_n(x)$ que sean funciones generadoras de un operador diferencial de la forma:
 
 \begin{equation}
-D = p\frac{d^2}{dx^2} + q\frac{d}{dx} = \frac{1}{w} \left( pw \frac{d}{dx}\right)', \nonumber
+D = p\frac{d^2}{dx^2} + q\frac{d}{dx} = \frac{1}{w} \left( pw \frac{d}{dx}\right)',  \qquad \qquad (3) \nonumber
 \label{SL_eq} 
 \end{equation}  
 
 donde $orden(p) \leq 2$, $orden(q) \leq 1$, $Dp_n = \lambda_n p_n$ y 
 
 \begin{equation}
-(pw)' = qw. \nonumber
+(pw)' = qw.  \qquad \qquad (4) \nonumber
 \label{eq_pearson}
 \end{equation} 
 
-A este tipo de operadores diferenciales se les denomina de tipo hipergeométrico o de tipo Sturm-Liouville. A la ecuación \ref{eq_pearson} se le denomina como la ecuación de Pearson.
+A este tipo de operadores diferenciales se les denomina de tipo hipergeométrico o de tipo Sturm-Liouville. A la ecuación **4** se le denomina como la ecuación de Pearson.
 
-Dado que $p$ es un polinomio de grado máximo 2, después de normalizaciones (mapeos afines de la recta, multiplicación del peso, el operador y los polinomios por constantes) se obtiene que existen 5 tipos de familias de polinomios ortogonales que son funciones generadoras del operador diferencial hipergeométrico $D$ (ecuación \ref{SL_eq}) dependiendo del grado y las raíces de $p$:
+Dado que $p$ es un polinomio de grado máximo 2, después de normalizaciones (mapeos afines de la recta, multiplicación del peso, el operador y los polinomios por constantes) se obtiene que existen 5 tipos de familias de polinomios ortogonales que son funciones generadoras del operador diferencial hipergeométrico $D$ (ecuación **3**) dependiendo del grado y las raíces de $p$:
 
 1. $p$ constante: polinomios de **Hermite**.
 2. $p$ lineal: polinomios de **Laguerre**. 
@@ -109,11 +109,11 @@ Dado que $p$ es un polinomio de grado máximo 2, después de normalizaciones (ma
 Muchos problemas de matemáticas aplicadas y teóricas así como problemas de física conducen a ecuaciones de la forma:
 
 \begin{equation}
-\sigma(x) u'' + \tau(x)u' + \lambda u = 0,
+\sigma(x) u'' + \tau(x)u' + \lambda u = 0,  \qquad \qquad (ab) \nonumber
 \label{eq1_DH}
 \end{equation}
 
-donde $\lambda$ es una constante y $\sigma(x)$ y $\tau(x)$ son polinomios de, al menos, segundo y primer grado, respectivamente. A esta ecuación se le conoce como ecuación diferencial del tipo hipergeométrico y se obtiene a través de las ecuaciones \ref{Simetria_D} y \ref{OPDyLam} e igualando:
+donde $\lambda$ es una constante y $\sigma(x)$ y $\tau(x)$ son polinomios de, al menos, segundo y primer grado, respectivamente. A esta ecuación se le conoce como ecuación diferencial del tipo hipergeométrico y se obtiene a través de las ecuaciones **2** y **3** e igualando:
 
 \begin{equation*}
 \sigma = p,
@@ -128,9 +128,9 @@ y
 \lambda = r.
 \end{equation*}
 
-Un aspecto que hay que tener en cuenta es que $\lambda$ no sólo es una constante sino que además es el valor generador del operador $D$. Por otro lado, la relación que existe entre $\sigma(x)$ y $\tau(x)$ en la ecuación \ref{eq1_DH} está dada por la ecuación de Pearson, ecuación \ref{eq_pearson}, que indica que $\tau(x)$ es derivada de $\sigma(x)$, siempre y cuando ambas estén multiplicadas por el peso $w$.
+Un aspecto que hay que tener en cuenta es que $\lambda$ no sólo es una constante sino que además es el valor generador del operador $D$. Por otro lado, la relación que existe entre $\sigma(x)$ y $\tau(x)$ en la ecuación **ab** está dada por la ecuación de Pearson que indica que $\tau(x)$ es derivada de $\sigma(x)$, siempre y cuando ambas estén multiplicadas por el peso $w$.
 
-En conclusión tenemos que, salvo normalizaciones, las únicas familias de polinomios ortogonales que son funciones generadoras de un operador diferencial de segundo orden que obedece a la ecuación \ref{Simetria_D}, es decir, un operador diferencial simétrico con respecto a un peso $w$ positivo soportado dentro de la recta real, son las familias de Hermite, Laguerre y Jacobi. A estas familias se les suele denominar polinomios ortogonales clásicos. En la Tabla \ref{Carac_POC} se muestra un resumen de las características de las familias clásicas.
+En conclusión tenemos que, salvo normalizaciones, las únicas familias de polinomios ortogonales que son funciones generadoras de un operador diferencial de segundo orden que obedece a la ecuación **3**, es decir, un operador diferencial simétrico con respecto a un peso $w$ positivo soportado dentro de la recta real, son las familias de Hermite, Laguerre y Jacobi. A estas familias se les suele denominar polinomios ortogonales clásicos. En la siguiente Tabla se muestra un resumen de las características de las familias clásicas.
 
 | Funciones     | Hermite $H_n(x)$   | Laguerre $L^{\alpha}_n(x)$| Jacobi $J^{\alpha, \beta}_n(x)$        |
 | :------------:|:------------------:|:-------------------------:| :-------------------------------------:|
