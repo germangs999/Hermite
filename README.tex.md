@@ -286,7 +286,7 @@ L_{20}
 \end{bmatrix},
 \end{equation*}
 
-donde $c = cos (\theta)$ y $s = sin(theta)$. De la misma forma se pueden obtener los coeficientes rotados para órdenes más altos de la transformada.
+donde $c = cos (\theta)$ y $s = sin(\theta)$. De la misma forma se pueden obtener los coeficientes rotados para órdenes más altos de la transformada.
 
 
 
