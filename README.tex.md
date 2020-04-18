@@ -182,7 +182,7 @@ Sustituyendo las definiciones dadas anteriormente de Gn(x) y V(x) en la ecuació
 hf_n(x) = \frac{1}{\sqrt{2^n n!}} \left[  \frac{d^n}{d(x/\sigma)^n} \left( \frac{1}{\sigma \sqrt{\pi}} e^{-(x/ \sigma)^2} \right) \right]  \nonumber
 \end{equation}
 
-En la siguiente imagen se presenta la comparación entre los polinomios y polinomios normalizados de Hermite, la diferencia principal radica en la multiplicación de los mismos por la fu7nción gaussiana.
+En la siguiente imagen se presenta la comparación entre los polinomios y polinomios normalizados de Hermite, la diferencia principal radica en la multiplicación de los mismos por la función gaussiana.
 
 Polinomios de Hermite        |  Polinomios Normalizados de Hermite
 :---------------------------:|:-----------------------------------:
@@ -224,21 +224,17 @@ donde $F(\omega_x, \omega_y)$ es la transformada de Fourier de $V^2(x,y)$. La ro
 
 \begin{equation*} % Entorno desde el cual pueden usarse los entornos y funciones matematicas
 \begin{bmatrix} % El entorno bmatrix puede generar vectores tambien, en ese caso uno de 1 x 3
-u w'\\
-v w'\\
-w'
+x_r \\
+y_r
 \end{bmatrix}
 =
 \begin{bmatrix} 
-t_{11} & t_{12} & t_{13} & t_{14} \\
-t_{21} & t_{22} & t_{23} & t_{24} \\
-t_{31} & t_{32} & t_{33} & t_{34}
+cos \theta & sen \theta \\
+-sen \theta & cos \theta 
 \end{bmatrix}
 \begin{bmatrix}
 x \\
-y \\
-z \\
-w
+y
 \end{bmatrix}
 \end{equation*}
 
