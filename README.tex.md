@@ -241,7 +241,7 @@ y
 Una rotación en el dominio espacial es equivalente a una rotación en el dominio de la frecuencia. Por lo tanto, la definición anterior aplica para las coordenadas en el dominio de la frecuencia. Reemplazando las coordenadas rotadas en la ecuación **10** se obtiene:
 
 \begin{equation*}
-HR^r_{m, n-m}(\omega_x , \omega_y, \theta) = \frac{1}{\sqrt{2^n (n-m)! m!}}  \left[ (j \sigma (\omega_x cos \theta + \omega_y sen \theta) )^m (j \sigma (-\omega_x sen \theta +\omega_y cos \theta) )^{n-m} F(\omega_x, \omega_y) \right].  \qquad \qquad (11)\nonumber
+HF^r_{m, n-m}(\omega_x , \omega_y, \theta) = \frac{1}{\sqrt{2^n (n-m)! m!}}  \left[ (j \sigma (\omega_x cos \theta + \omega_y sen \theta) )^m (j \sigma (-\omega_x sen \theta +\omega_y cos \theta) )^{n-m} F(\omega_x, \omega_y) \right].  \qquad \qquad (11)\nonumber
 \end{equation*}
 
 Desarrollando la ecuación **11** y usando la transformada de Fourier inversa podemos obtener los filtros de Hermite rotados para un orden $n \geq 1$. Dado que los coeficientes de la TH son obtenidos por un proceso de convolución entre la imagen de entrada y los filtros, es posible obtener los coeficientes rotados a partir de los cartesianos usando la ecuación **11**. Hay que resaltar que la
