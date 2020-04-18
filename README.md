@@ -155,11 +155,30 @@ Una de las virtudes más reconocidas de la transformada de Hermite es su capacid
 
 Para el proceso de rotación bidimensional, se obtiene la transformada de Fourier de los filtros definidos en la ecuación **9**:
 
-<p align="center"><img src="/tex/784039f4121688691602fb04a9a3b416.svg?invert_in_darkmode&sanitize=true" align=middle width=501.12663315000003pt height=40.289634pt/></p>
+<p align="center"><img src="/tex/3483cc5c55de53d2f82881f6122141e5.svg?invert_in_darkmode&sanitize=true" align=middle width=598.4689062pt height=40.289634pt/></p>
 
 donde <img src="/tex/c3ece3a75fed601ac0ee788147cf4541.svg?invert_in_darkmode&sanitize=true" align=middle width=69.58726994999999pt height=24.65753399999998pt/> es la transformada de Fourier de <img src="/tex/42946edc78445858d235e3bec98fee85.svg?invert_in_darkmode&sanitize=true" align=middle width=58.75200209999999pt height=26.76175259999998pt/>. La rotación definida en coordenadas cartesianas para el caso bidimensional se define como:
 
-<p align="center"><img src="/tex/9512f903f7093a0cf0a54c1355538726.svg?invert_in_darkmode&sanitize=true" align=middle width=198.80539635pt height=39.452455349999994pt/></p>
+<p align="center"><img src="/tex/1bbc3a962fa26a9d4f9bdd6dabdd6dd6.svg?invert_in_darkmode&sanitize=true" align=middle width=198.80539635pt height=39.452455349999994pt/></p>
+
+Una rotación en el dominio espacial es equivalente a una rotación en el dominio de la frecuencia. Por lo tanto, la definición anterior aplica para las coordenadas en el dominio de la frecuencia. Reemplazando las coordenadas rotadas en la ecuación **10** se obtiene:
+
+<p align="center"><img src="/tex/046077ccc55a95e05cd15422cf8f9aa8.svg?invert_in_darkmode&sanitize=true" align=middle width=859.5445237499999pt height=40.289634pt/></p>
+
+Desarrollando la ecuación **11** y usando la transformada de Fourier inversa podemos obtener los filtros de Hermite rotados para un orden <img src="/tex/8fa66d8b80ce643977d63a6f345785b9.svg?invert_in_darkmode&sanitize=true" align=middle width=40.00371704999999pt height=21.18721440000001pt/>. Dado que los coeficientes de la TH son obtenidos por un proceso de convolución entre la imagen de entrada y los filtros, es posible obtener los coeficientes rotados a partir de los cartesianos usando la ecuación **11**. Hay que resaltar que la
+función Gaussiana es isotrópica, por lo cual no sufre modificaciones en el desarrollo anterior. Por ejemplo, los coeficientes de Hermite para los primeros dos órdenes son:
+
+* Para <img src="/tex/e1358fc9fbfa5b82243d29c7f4a7bbb2.svg?invert_in_darkmode&sanitize=true" align=middle width=40.00371704999999pt height=21.18721440000001pt/>,
+
+<p align="center"><img src="/tex/095f586275888061f6c4aa1009149204.svg?invert_in_darkmode&sanitize=true" align=middle width=192.5345103pt height=39.452455349999994pt/></p>
+
+* Para <img src="/tex/a2b83378f3a851a69124cae9e0f695fc.svg?invert_in_darkmode&sanitize=true" align=middle width=40.00371704999999pt height=21.18721440000001pt/>,
+
+<p align="center"><img src="/tex/db1577bd495f0da539c35990d99a76b6.svg?invert_in_darkmode&sanitize=true" align=middle width=294.12497895pt height=59.1786591pt/></p>
+
+donde <img src="/tex/93841b4479b43ec19b60fc47f8c76b09.svg?invert_in_darkmode&sanitize=true" align=middle width=72.77772974999998pt height=24.65753399999998pt/> y <img src="/tex/816bea0b2d8e1d65462ef747f36ded33.svg?invert_in_darkmode&sanitize=true" align=middle width=103.33072694999998pt height=24.65753399999998pt/>. De la misma forma se pueden obtener los coeficientes rotados para órdenes más altos de la transformada.
+
+
 
 
 
