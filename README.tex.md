@@ -288,7 +288,14 @@ L_{20}
 
 donde $c = cos (\theta)$ y $s = sin(\theta)$. De la misma forma se pueden obtener los coeficientes rotados para órdenes más altos de la transformada.
 
+Finalmente, la **TH** presenta algunas ventajas con respecto a otros modelos de descomposición, las cuales han motivado el uso de esta transformada en este proyecto. Algunas de estas ventajas son:
 
+* Es considerado un modelo de visión.
+* Permite hacer análisis direccional.
+* Las funciones bases de la descomposición son ortogonales.
+* Los filtros son separables, lo cual permite una fácil implementación en varias dimensiones.
+* El submuestreo es definido por el usuario.
+* Permite hacer análisis multiescala y multiresolución.
 
 
 
