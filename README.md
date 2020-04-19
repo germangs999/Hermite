@@ -1,4 +1,4 @@
-# Hermite
+# Transformada de Hermite
 La transformada Hermite como herramienta para el procesamiento digital de señales.
 ## Polinomios ortogonales clásicos
 La ecuación diferencial general lineal de segundo orden en el intervalo definido entre <img src="/tex/1d5ba78bbbafd3226f371146bc348363.svg?invert_in_darkmode&sanitize=true" align=middle width=29.223836399999986pt height=19.1781018pt/> a <img src="/tex/f7a0f24dc1f54ce82fecccbbf48fca93.svg?invert_in_darkmode&sanitize=true" align=middle width=16.43840384999999pt height=14.15524440000002pt/>, <img src="/tex/1e0b3ba102d93befac9442fe8860d166.svg?invert_in_darkmode&sanitize=true" align=middle width=111.99012659999997pt height=24.65753399999998pt/>, es:
@@ -255,13 +255,53 @@ La comparación de los coeficientes obtenidos con diferentes desviaciones están
 :----------------------------------:|:-----------------------------------:|:-------------------------------------:
 ![Image8](Imagenes/I_dhtdis11.png)  |  ![Image9](Imagenes/I_dhtdis30.png) |  ![Image10](Imagenes/I_dhtdis100.png)
 
+## Rotación
+
+El proceso de rotación de los coeficientes implica encontrar los ángulos de interés con respecto a los cuales se necesita hacer la rotación. El ángulo se estima de forma adaptativa para cada punto usando la dirección de máxima energía. El código siguiente sirve para calcular los coeficientes de Hermite rotados.
+
+```python
+import cv2
+from HermiteRotado import HermiteTransform2DFreq
+from collections import defaultdict
+import numpy as np
+
+I = cv2.imread('dimetrodon10.png',cv2.COLOR_BGR2GRAY)
+
+N = 3;  # Maximo Orden de la expansión 
+D = 10;  #Orden de la transformada
+M = np.array([N+1, N+1])
+T  = 1;              # Valor de Submuestreo para cada Escala
+sg = 2.4;    #Control de la desviación estándar de la gaussiana
+Sel = 0     # 0 es para elegir descomposición
+ImaDesc = defaultdict(dict) #Diccionario en donde se almacenaran los coefs
+ImaDescRot2  = defaultdict(dict)
+AngTeta2     = defaultdict(dict)
+ImaDescRot12 = defaultdict(dict)
+tam = I.shape  #tamaño de la imagen
+
+[ImaDesc,_] = HermiteTransform2DFreq(I, T, M, sg, N, Sel, tam)
+##Esta parte es la de rotación
+Sel = 2
+[ImaDescRot2,ImaDescRot12, AngTeta2, Dn] =  HermiteTransform2DFreq(ImaDesc,T, M, sg, N, Sel, tam)
+```
+
+En la siguiente Figura se ilustran los coeficientes de Hermite rotados calculados a partir de los coeficientes cartesianos (sin rotación). Como se puede notar, toda la energía en la transformada rotada se concentra sobre los coeficientes de la primera línea. Esto se puede interpretar como un proceso de filtrado si consideramos que el resto de coeficientes corresponden al ruido, por lo cual podrían ser descartados.
+
+Sin rotación                      | Con rotación
+:--------------------------------:|:-----------------------------------:
+![Image20](Imagenes/I_sr.png)     |  ![Image21](Imagenes/I_cr.png)
+
+
+
 ## Reconstrucción
 
 A partir de los coeficientes de Hermite podemos reconstruir la imagen. Los resultados se muestran en la siguiete tabla y la medida de similitud es el coeficiente de correlación:
 
 Original                            | Binomial                            | Discrretización <img src="/tex/a5d16dfe2bd8650dcbade85ae467cd3d.svg?invert_in_darkmode&sanitize=true" align=middle width=52.90515614999999pt height=21.18721440000001pt/> 
 :----------------------------------:|:-----------------------------------:|:-------------------------------------:
-![Image11](dimetrodon10.png.png)    |  ![Image12](Imagenes/IR_Bin.png)    |  ![Image13](Imagenes/IR_24.png)
-                                    | corrcoef = 0.9814                   | corrcoef = 0.9537
+![Image11](dimetrodon10.png)        |  ![Image12](Imagenes/IR_Bin.png)    |  ![Image13](Imagenes/IR_24.png)
+    _                               | corrcoef = 0.9814                   | corrcoef = 0.9537
+
+La ventaja de la aproximación binomial es que se puede obtener una mejor reconstrucción. Mientras que, la discretización de la gaussiana permite cambiar la forma de la función para encontrar diferentes patrones dentro de la imagen.
 
 
