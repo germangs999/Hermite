@@ -368,13 +368,25 @@ $\sigma = 1.1$                      | $\sigma = 3$                        | $\si
 :----------------------------------:|:-----------------------------------:|:-------------------------------------:
 ![Image8](Imagenes/I_dhtdis11.png)  |  ![Image9](Imagenes/I_dhtdis30.png) |  ![Image10](Imagenes/I_dhtdis100.png)
 
+## Rotación
+
+El proceso de rotación de los coeficientes implica encontrar los ángulos de interés con respecto a los cuales se necesita hacer la rotación. El ángulo se estima de forma adaptativa para cada punto usando la dirección de máxima energía. En la siguiente Figura se ilustran los coeficientes de Hermite rotados calculados a partir de los coeficientes cartesianos (sin rotación). Como se puede notar, toda la energía en la transformada rotada se concentra sobre los coeficientes de la primera línea. Esto se puede interpretar como un proceso de filtrado si consideramos que el resto de coeficientes corresponden al ruido, por lo cual podrían ser descartados.
+
+Sin rotación                      | Con rotación
+:--------------------------------:|:-----------------------------------:
+![Image20](Imagenes/I_sr.png)     |  ![Image21](Imagenes/I_cr.png)
+
+
+
 ## Reconstrucción
 
 A partir de los coeficientes de Hermite podemos reconstruir la imagen. Los resultados se muestran en la siguiete tabla y la medida de similitud es el coeficiente de correlación:
 
 Original                            | Binomial                            | Discrretización $\sigma = 2.4$ 
 :----------------------------------:|:-----------------------------------:|:-------------------------------------:
-![Image11](dimetrodon10.png)    |  ![Image12](Imagenes/IR_Bin.png)    |  ![Image13](Imagenes/IR_24.png)
+![Image11](dimetrodon10.png)        |  ![Image12](Imagenes/IR_Bin.png)    |  ![Image13](Imagenes/IR_24.png)
     _                               | corrcoef = 0.9814                   | corrcoef = 0.9537
+
+La ventaja de la aproximación binomial es que se puede obtener una mejor reconstrucción. Mientras que, la discretización de la gaussiana permite cambiar la forma de la función para encontrar diferentes patrones dentro de la imagen.
 
 
