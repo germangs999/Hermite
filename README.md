@@ -248,3 +248,9 @@ La comparación entre los coeficientes obtenidos a través de las dos implementa
 Aproximación con función binomial | Discretización gaussiana
 :--------------------------------:|:-----------------------------------:
 ![Image6](Imagenes/I_dhtbin.png)  |  ![Image7](Imagenes/I_dhtdis11.png)
+
+La comparación de los coeficientes obtenidos con diferentes desviaciones estándar <img src="/tex/8cda31ed38c6d59d14ebefa440099572.svg?invert_in_darkmode&sanitize=true" align=middle width=9.98290094999999pt height=14.15524440000002pt/> (**sg**) se muestra a continuación:
+
+<img src="/tex/3170b24718014bd9ec4c8c0c772fb6ce.svg?invert_in_darkmode&sanitize=true" align=middle width=52.90515614999999pt height=21.18721440000001pt/>                      | <img src="/tex/f95ca178b7339aa7209a22ac88978032.svg?invert_in_darkmode&sanitize=true" align=middle width=40.11972194999999pt height=21.18721440000001pt/>                        | <img src="/tex/06885366aad27fe5220219d0372b2206.svg?invert_in_darkmode&sanitize=true" align=middle width=48.33893129999999pt height=21.18721440000001pt/> 
+:----------------------------------:|:-----------------------------------:|:-------------------------------------:
+![Image8](Imagenes/I_dhtdis11.png)  |  ![Image9](Imagenes/I_dhtdis30.png) |  ![Image10](Imagenes/I_dhtdis100.png)
