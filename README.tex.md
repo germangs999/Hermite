@@ -367,3 +367,14 @@ La comparación de los coeficientes obtenidos con diferentes desviaciones están
 $\sigma = 1.1$                      | $\sigma = 3$                        | $\sigma = 10$ 
 :----------------------------------:|:-----------------------------------:|:-------------------------------------:
 ![Image8](Imagenes/I_dhtdis11.png)  |  ![Image9](Imagenes/I_dhtdis30.png) |  ![Image10](Imagenes/I_dhtdis100.png)
+
+## Reconstrucción
+
+A partir de los coeficientes de Hermite podemos reconstruir la imagen. Los resultados se muestran en la siguiete tabla y la medida de similitud es el coeficiente de correlación:
+
+Original                            | Binomial                            | Discrretización $\sigma = 2.4$ 
+:----------------------------------:|:-----------------------------------:|:-------------------------------------:
+![Image11](dimetrodon10.png.png)    |  ![Image12](Imagenes/IR_Bin.png)    |  ![Image13](Imagenes/IR_24.png)
+                                    | corrcoef = 0.9814                   | corrcoef = 0.9537
+
+
