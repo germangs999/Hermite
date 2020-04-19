@@ -254,3 +254,14 @@ La comparación de los coeficientes obtenidos con diferentes desviaciones están
 <img src="/tex/3170b24718014bd9ec4c8c0c772fb6ce.svg?invert_in_darkmode&sanitize=true" align=middle width=52.90515614999999pt height=21.18721440000001pt/>                      | <img src="/tex/f95ca178b7339aa7209a22ac88978032.svg?invert_in_darkmode&sanitize=true" align=middle width=40.11972194999999pt height=21.18721440000001pt/>                        | <img src="/tex/06885366aad27fe5220219d0372b2206.svg?invert_in_darkmode&sanitize=true" align=middle width=48.33893129999999pt height=21.18721440000001pt/> 
 :----------------------------------:|:-----------------------------------:|:-------------------------------------:
 ![Image8](Imagenes/I_dhtdis11.png)  |  ![Image9](Imagenes/I_dhtdis30.png) |  ![Image10](Imagenes/I_dhtdis100.png)
+
+## Reconstrucción
+
+A partir de los coeficientes de Hermite podemos reconstruir la imagen. Los resultados se muestran en la siguiete tabla y la medida de similitud es el coeficiente de correlación:
+
+Original                            | Binomial                            | Discrretización <img src="/tex/a5d16dfe2bd8650dcbade85ae467cd3d.svg?invert_in_darkmode&sanitize=true" align=middle width=52.90515614999999pt height=21.18721440000001pt/> 
+:----------------------------------:|:-----------------------------------:|:-------------------------------------:
+![Image11](dimetrodon10.png.png)    |  ![Image12](Imagenes/IR_Bin.png)    |  ![Image13](Imagenes/IR_24.png)
+                                    | corrcoef = 0.9814                   | corrcoef = 0.9537
+
+
