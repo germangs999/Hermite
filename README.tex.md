@@ -303,6 +303,7 @@ Como se ha descrito anteriormente, la función de peso $\omega (x)$ de los polin
 
 * Aproximación mediante la función binomial.
 * Discretización directa de la función gaussiana.
+
 El código **TH_ejemplo.py** muestra la comparación entre los coeficientes obtenidos con las dos diferentes implementaciones
 La imagen de la cual se extraerán los coeficientes de Hermite de ambas formas es:
 
@@ -316,6 +317,7 @@ f_N(x) = {N \choose x }=
 \end{equation*}
 
 para $x = 0,1, \ldots, N$ y $N$ es el orden del filtro deseado. 
+
 La función que calcula los coeficientes basados en la aproximación binomial de la imagen **I** (previamente transformada a escala de grises) es **dht2** incluida en el archivo **hermite.py**.
 
 ```python
