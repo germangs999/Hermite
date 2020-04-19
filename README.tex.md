@@ -315,7 +315,8 @@ f_N(x) = {N \choose x }=
 \frac{N!}{x!\, (N-x)!},
 \end{equation*}
 
-para $x = 0,1, \ldots, N$ y $N$ es el orden del filtro deseado.
+para $x = 0,1, \ldots, N$ y $N$ es el orden del filtro deseado. 
+La función que calcula los coeficientes basados en la aproximación binomial de la imagen **I** (previamente transformada a escala de grises) es **dht2** incluida en el archivo **hermite.py**.
 
 ```python
 import cv2
@@ -331,8 +332,26 @@ T = 1; #DParámetro de submuestreo
 IH1=dht2(I,N,D,T)
 ```
 
+Por otro lado, la función que calcula los coeficientes basados en la discretización directa de la función gaussiana de la imagen **I** es **dht2** incluida en el archivo **hermite.py**
 
+```python
+import cv2
+from HermiteRotado import HermiteTransform2DFreq
+from collections import defaultdict
+import numpy as np
 
+I = cv2.imread('dimetrodon10.png',cv2.COLOR_BGR2GRAY)
 
+# Parámetros de la transformada Hermite  con apriximación gaussiana
+D = 3;                      # Maximo Orden de la expansión 
+N = 10;                     #Orden de la transformada
+M = np.array([N+1, N+1])
+T  = 1;                     # Valor de Submuestreo para cada Escala
+sg = 10;                    #Control de la desviación estándar de la gaussiana
+Sel = 0                     # 0 es para elegir descomposición
+ImaDesc = defaultdict(dict) #Diccionario en donde se almacenaran los coefs
+tam = I.shape               #tamaño de la imagen
 
-
+[ImaDesc,_] = HermiteTransform2DFreq(I, T, M, sg, D, Sel, tam)
+```
+ 
