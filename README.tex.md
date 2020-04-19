@@ -370,7 +370,35 @@ $\sigma = 1.1$                      | $\sigma = 3$                        | $\si
 
 ## Rotación
 
-El proceso de rotación de los coeficientes implica encontrar los ángulos de interés con respecto a los cuales se necesita hacer la rotación. El ángulo se estima de forma adaptativa para cada punto usando la dirección de máxima energía. En la siguiente Figura se ilustran los coeficientes de Hermite rotados calculados a partir de los coeficientes cartesianos (sin rotación). Como se puede notar, toda la energía en la transformada rotada se concentra sobre los coeficientes de la primera línea. Esto se puede interpretar como un proceso de filtrado si consideramos que el resto de coeficientes corresponden al ruido, por lo cual podrían ser descartados.
+El proceso de rotación de los coeficientes implica encontrar los ángulos de interés con respecto a los cuales se necesita hacer la rotación. El ángulo se estima de forma adaptativa para cada punto usando la dirección de máxima energía. El código siguiente sirve para calcular los coeficientes de Hermite rotados.
+
+```python
+import cv2
+from HermiteRotado import HermiteTransform2DFreq
+from collections import defaultdict
+import numpy as np
+
+I = cv2.imread('dimetrodon10.png',cv2.COLOR_BGR2GRAY)
+
+N = 3;  # Maximo Orden de la expansión 
+D = 10;  #Orden de la transformada
+M = np.array([N+1, N+1])
+T  = 1;              # Valor de Submuestreo para cada Escala
+sg = 2.4;    #Control de la desviación estándar de la gaussiana
+Sel = 0     # 0 es para elegir descomposición
+ImaDesc = defaultdict(dict) #Diccionario en donde se almacenaran los coefs
+ImaDescRot2  = defaultdict(dict)
+AngTeta2     = defaultdict(dict)
+ImaDescRot12 = defaultdict(dict)
+tam = I.shape  #tamaño de la imagen
+
+[ImaDesc,_] = HermiteTransform2DFreq(I, T, M, sg, N, Sel, tam)
+##Esta parte es la de rotación
+Sel = 2
+[ImaDescRot2,ImaDescRot12, AngTeta2, Dn] =  HermiteTransform2DFreq(ImaDesc,T, M, sg, N, Sel, tam)
+```
+
+En la siguiente Figura se ilustran los coeficientes de Hermite rotados calculados a partir de los coeficientes cartesianos (sin rotación). Como se puede notar, toda la energía en la transformada rotada se concentra sobre los coeficientes de la primera línea. Esto se puede interpretar como un proceso de filtrado si consideramos que el resto de coeficientes corresponden al ruido, por lo cual podrían ser descartados.
 
 Sin rotación                      | Con rotación
 :--------------------------------:|:-----------------------------------:
