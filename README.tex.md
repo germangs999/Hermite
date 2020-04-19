@@ -375,6 +375,6 @@ A partir de los coeficientes de Hermite podemos reconstruir la imagen. Los resul
 Original                            | Binomial                            | Discrretización $\sigma = 2.4$ 
 :----------------------------------:|:-----------------------------------:|:-------------------------------------:
 ![Image11](dimetrodon10.png.png)    |  ![Image12](Imagenes/IR_Bin.png)    |  ![Image13](Imagenes/IR_24.png)
-                                    | corrcoef = 0.9814                   | corrcoef = 0.9537
+    _                               | corrcoef = 0.9814                   | corrcoef = 0.9537
 
 
