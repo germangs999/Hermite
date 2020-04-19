@@ -306,7 +306,7 @@ Como se ha descrito anteriormente, la función de peso $\omega (x)$ de los polin
 El código **TH_ejemplo.py** muestra la comparación entre los coeficientes obtenidos con las dos diferentes implementaciones
 La imagen de la cual se extraerán los coeficientes de Hermite de ambas formas es:
 
-![Dim](dimetrodon10.png | width=100)
+![Dim](dimetrodon10.png )
 
 Los filtros binomiales se generan a partir de la función binomial o bien del triángulo de Pascal. La función binomial está definida como:
 
