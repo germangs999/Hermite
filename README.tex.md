@@ -361,3 +361,9 @@ La comparación entre los coeficientes obtenidos a través de las dos implementa
 Aproximación con función binomial | Discretización gaussiana
 :--------------------------------:|:-----------------------------------:
 ![Image6](Imagenes/I_dhtbin.png)  |  ![Image7](Imagenes/I_dhtdis11.png)
+
+La comparación de los coeficientes obtenidos con diferentes desviaciones estándar $\sigma$ (**sg**) se muestra a continuación:
+
+$\sigma = 1.1$                      | $\sigma = 3$                        | $\sigma = 10$ 
+:----------------------------------:|:-----------------------------------:|:-------------------------------------:
+![Image8](Imagenes/I_dhtdis11.png)  |  ![Image9](Imagenes/I_dhtdis30.png) |  ![Image10](Imagenes/I_dhtdis100.png)
