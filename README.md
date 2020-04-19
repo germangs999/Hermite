@@ -187,6 +187,38 @@ Finalmente, la **TH** presenta algunas ventajas con respecto a otros modelos de 
 * El submuestreo es definido por el usuario.
 * Permite hacer análisis multiescala y multiresolución.
 
+# Descomposición de imagenes en coeficientes de Hermite
+
+Como se ha descrito anteriormente, la función de peso <img src="/tex/e80d2a1c9a200e59665e4f7370ec48b6.svg?invert_in_darkmode&sanitize=true" align=middle width=33.00232814999999pt height=24.65753399999998pt/> de los polinomios de Hermite es una función gaussiana. La función gaussiana se define en el dominio continuo, por lo que es necesario discretizarla y para ello, mostraremos el resultado de dos implementaciones de la discretización de la función gaussiana:
+
+* Aproximación mediante la función binomial.
+* Discretización directa de la función gaussiana.
+El código **TH_ejemplo.py** muestra la comparación entre los coeficientes obtenidos con las dos diferentes implementaciones
+La imagen de la cual se extraerán los coeficientes de Hermite de ambas formas es:
+
+![Dim](dimetrodon10.png | width=100)
+
+Los filtros binomiales se generan a partir de la función binomial o bien del triángulo de Pascal. La función binomial está definida como:
+
+<p align="center"><img src="/tex/86ec45d923aa481147586a6d138730ae.svg?invert_in_darkmode&sanitize=true" align=middle width=212.78271795pt height=39.452455349999994pt/></p>
+
+para <img src="/tex/f398cdd9af41e35f5152f68feaa419af.svg?invert_in_darkmode&sanitize=true" align=middle width=106.58632709999999pt height=22.465723500000017pt/> y <img src="/tex/f9c4988898e7f532b9f826a75014ed3c.svg?invert_in_darkmode&sanitize=true" align=middle width=14.99998994999999pt height=22.465723500000017pt/> es el orden del filtro deseado.
+
+```python
+import cv2
+from hermite import  dht2
+
+I = cv2.imread('dimetrodon10.png',cv2.COLOR_BGR2GRAY)
+
+# Parámetros de la transformada Hermite  con binomial
+N = 10; #Orden de la transformada
+D = 3; #Máximo orden de la expansión
+T = 1; #DParámetro de submuestreo
+
+IH1=dht2(I,N,D,T)
+```
+
+
 
 
 
