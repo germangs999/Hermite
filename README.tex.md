@@ -326,13 +326,13 @@ I = cv2.imread('dimetrodon10.png',cv2.COLOR_BGR2GRAY)
 
 # Parámetros de la transformada Hermite  con binomial
 N = 10; #Orden de la transformada
-D = 3; #Máximo orden de la expansión
-T = 1; #DParámetro de submuestreo
+D = 3;  #Máximo orden de la expansión
+T = 1;  #Parámetro de submuestreo
 
 IH1=dht2(I,N,D,T)
 ```
 
-Por otro lado, la función que calcula los coeficientes basados en la discretización directa de la función gaussiana de la imagen **I** es **dht2** incluida en el archivo **hermite.py**
+Por otro lado, la función que calcula los coeficientes basados en la discretización directa de la función gaussiana de la imagen **I** es **HermiteTransform2DFreq** incluida en el archivo **HermiteRotado.py**. En este caso, prácticamente tenemos los mismos parámetros que en la función **dht2**, exceptuando por la variable **sg** que corresponde a la desviación estándar de la función gaussiana:
 
 ```python
 import cv2
@@ -343,15 +343,19 @@ import numpy as np
 I = cv2.imread('dimetrodon10.png',cv2.COLOR_BGR2GRAY)
 
 # Parámetros de la transformada Hermite  con apriximación gaussiana
-D = 3;                      # Maximo Orden de la expansión 
+D = 3;                      #Maximo Orden de la expansión 
 N = 10;                     #Orden de la transformada
 M = np.array([N+1, N+1])
-T  = 1;                     # Valor de Submuestreo para cada Escala
-sg = 10;                    #Control de la desviación estándar de la gaussiana
-Sel = 0                     # 0 es para elegir descomposición
+T  = 1;                     #Valor de Submuestreo para cada Escala
+sg = 1.1;                   #Control de la desviación estándar de la gaussiana
+Sel = 0                     #0 es para elegir descomposición
 ImaDesc = defaultdict(dict) #Diccionario en donde se almacenaran los coefs
 tam = I.shape               #tamaño de la imagen
 
 [ImaDesc,_] = HermiteTransform2DFreq(I, T, M, sg, D, Sel, tam)
 ```
- 
+La comparación entre los coeficientes obtenidos a través de las dos implementaciones se muestra a continuación:
+
+Aproximación con función binomial | Discretización gaussiana
+:--------------------------------:|:-----------------------------------:
+![Image6](Imagenes/I_dhtbin.png)  |  ![Image7](Imagenes/I_dhtdis11.png)
