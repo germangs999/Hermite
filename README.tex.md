@@ -297,6 +297,41 @@ Finalmente, la **TH** presenta algunas ventajas con respecto a otros modelos de 
 * El submuestreo es definido por el usuario.
 * Permite hacer análisis multiescala y multiresolución.
 
+# Descomposición de imagenes en coeficientes de Hermite
+
+Como se ha descrito anteriormente, la función de peso $\omega (x)$ de los polinomios de Hermite es una función gaussiana. La función gaussiana se define en el dominio continuo, por lo que es necesario discretizarla y para ello, mostraremos el resultado de dos implementaciones de la discretización de la función gaussiana:
+
+* Aproximación mediante la función binomial.
+* Discretización directa de la función gaussiana.
+El código **TH_ejemplo.py** muestra la comparación entre los coeficientes obtenidos con las dos diferentes implementaciones
+La imagen de la cual se extraerán los coeficientes de Hermite de ambas formas es:
+
+![Dim](dimetrodon10.png | width=100)
+
+Los filtros binomiales se generan a partir de la función binomial o bien del triángulo de Pascal. La función binomial está definida como:
+
+\begin{equation*}
+f_N(x) = {N \choose x }=
+\frac{N!}{x!\, (N-x)!},
+\end{equation*}
+
+para $x = 0,1, \ldots, N$ y $N$ es el orden del filtro deseado.
+
+```python
+import cv2
+from hermite import  dht2
+
+I = cv2.imread('dimetrodon10.png',cv2.COLOR_BGR2GRAY)
+
+# Parámetros de la transformada Hermite  con binomial
+N = 10; #Orden de la transformada
+D = 3; #Máximo orden de la expansión
+T = 1; #DParámetro de submuestreo
+
+IH1=dht2(I,N,D,T)
+```
+
+
 
 
 
