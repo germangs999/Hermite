@@ -410,7 +410,7 @@ Sin rotación                      | Con rotación
 
 A partir de los coeficientes de Hermite podemos reconstruir la imagen. Los resultados se muestran en la siguiete tabla y la medida de similitud es el coeficiente de correlación:
 
-|Original                            | Binomial                       | Discrretización $\sigma = 2.4$ |         
+|Original                            | Binomial                       | Discretización $\sigma = 2.4$  |         
 |:----------------------------------:|:------------------------------:|:------------------------------:|
 |![Image11](dimetrodon10.png)        |![Image12](Imagenes/IR_Bin.png) |![Image13](Imagenes/IR_24.png)  |
 |    _                               | corrcoef = 0.9814              | corrcoef = 0.9537              |
