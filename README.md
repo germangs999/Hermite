@@ -297,10 +297,10 @@ Sin rotación                      | Con rotación
 
 A partir de los coeficientes de Hermite podemos reconstruir la imagen. Los resultados se muestran en la siguiete tabla y la medida de similitud es el coeficiente de correlación:
 
-Original                            | Binomial                            | Discrretización <img src="/tex/a5d16dfe2bd8650dcbade85ae467cd3d.svg?invert_in_darkmode&sanitize=true" align=middle width=52.90515614999999pt height=21.18721440000001pt/> 
-:----------------------------------:|:-----------------------------------:|:-------------------------------------:
-![Image11](dimetrodon10.png)        |  ![Image12](Imagenes/IR_Bin.png)    |  ![Image13](Imagenes/IR_24.png)
-    _                               | corrcoef = 0.9814                   | corrcoef = 0.9537
+|Original                            | Binomial                       | Discrretización <img src="/tex/a5d16dfe2bd8650dcbade85ae467cd3d.svg?invert_in_darkmode&sanitize=true" align=middle width=52.90515614999999pt height=21.18721440000001pt/> |         
+|:----------------------------------:|:------------------------------:|:------------------------------:|
+|![Image11](dimetrodon10.png)        |![Image12](Imagenes/IR_Bin.png) |![Image13](Imagenes/IR_24.png)  |
+|    _                               | corrcoef = 0.9814              | corrcoef = 0.9537              |
 
 La ventaja de la aproximación binomial es que se puede obtener una mejor reconstrucción. Mientras que, la discretización de la gaussiana permite cambiar la forma de la función para encontrar diferentes patrones dentro de la imagen.
 
